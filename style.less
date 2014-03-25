@@ -50,44 +50,12 @@ figure {margin: 0;}
 /*** FONTFACE ***/
 
 @font-face {
-  font-family: 'hp regular';
-  src: url('fonts/hpsimplified_rg-webfont.eot');
-  src: url('fonts/hpsimplified_rg-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified_rg-webfont.woff') format('woff'), url('fonts/hpsimplified_rg-webfont.ttf') format('truetype'), url('fonts/hpsimplified_rg-webfont.svg#hp_simplifieditalic') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'hp bold';
-  src: url('fonts/hpsimplified_bd-webfont.eot');
-  src: url('fonts/hpsimplified_bd-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified_bd-webfont.woff') format('woff'), url('fonts/hpsimplified_bd-webfont.ttf') format('truetype'), url('fonts/hpsimplified_bd-webfont.svg#hp_simplifiedbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'hp bold italic';
-  src: url('fonts/hpsimplified_bdit-webfont.eot');
-  src: url('fonts/hpsimplified_bdit-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified_bdit-webfont.woff') format('woff'), url('fonts/hpsimplified_bdit-webfont.ttf') format('truetype'), url('fonts/hpsimplified_bdit-webfont.svg#hp_simplifiedbold_italic') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'hp italic';
-  src: url('fonts/hpsimplified_it-webfont.eot');
-  src: url('fonts/hpsimplified_it-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified_it-webfont.woff') format('woff'), url('fonts/hpsimplified_it-webfont.ttf') format('truetype'), url('fonts/hpsimplified_it-webfont.svg#hp_simplifieditalic') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'hp lt';
-  src: url('fonts/hpsimplified_lt-webfont.eot');
-  src: url('fonts/hpsimplified_lt-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified_lt-webfont.woff') format('woff'), url('fonts/hpsimplified_lt-webfont.ttf') format('truetype'), url('fonts/hpsimplified_lt-webfont.svg#hp_simplifieditalic') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'hp lt it';
-  src: url('fonts/hpsimplified_ltit-webfont.eot');
-  src: url('fonts/hpsimplified_ltit-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified_ltit-webfont.woff') format('woff'), url('fonts/hpsimplified_ltit-webfont.ttf') format('truetype'), url('fonts/hpsimplified_ltit-webfont.svg#hp_simplifieditalic') format('svg');
+  font-family: 'font';
+  src:  url('fonts/font.eot');
+  src:  url('fonts/font.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font.woff') format('woff'),
+		url('fonts/font.ttf') format('truetype'),
+		url('fonts/font.svg#font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -97,11 +65,19 @@ figure {margin: 0;}
 @claro: 	#fff;
 @highlight:	#1aa2dc;
 
+@twitter:     #2aa8df;
+@facebook:    #3c5a97;
+@pinterest:   #c92027;
+@gplus:     #dd4b39;
+@linkedin:    #007bb6;
+
+@warning:     #e74c3c;
+
 @margen: 	20px;
 
 /*** MIXINS ***/
 
-.hp( @size: 14px, @line: 18px, @family: 'hp regular'){
+.font( @size: 14px, @line: 18px, @family: 'font'){
 	font: @size / @line @family;
 }
 
@@ -126,14 +102,41 @@ figure {margin: 0;}
   background-clip:         padding-box;
 }
 
+.border-radius (@radius: 4px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+
+.transition (@transition: all 0.3s ease ) {
+  -webkit-transition: @transition;
+  -moz-transition:    @transition;
+  -ms-transition:     @transition;
+  -o-transition:      @transition;
+}
+
 
 /*** FRAMEWORK ***/
 
 //propiedades
 .hide{ display: none; }
+.block{ display: block !important; }
+
+.text-center{ text-align: center; }
+
+.no-margin{ margin: 0 !important; }
+.no-margin-bottom{ margin-bottom: 0 !important; }
 
 //layout
+.container{ min-width: 300px; }
 .width{ width: 90%; min-width: 300px; margin: 0 auto @margen auto; }
+.full{ width: 100%;
+  //img{ width: 100%; height: auto; }
+}
 
 .center{ margin-left: auto !important; margin-right: auto !important; float: none !important; }
 .left{ float: left !important; }
@@ -188,10 +191,16 @@ p{ margin-bottom: 1em; }
 //caracteristicas
 .text-center{ text-align: center; }
 
+//Media Queries
+.small{ display: none; }
+
 
 /*** GENERAL ***/
 
-body{ background: #fff; .hp; }
+::selection{ background: @highlight; color: @claro; }
+::-moz-selection { background: @highlight; color: @claro; }
+
+body{ background: #fff; .font; }
 
 /*** HEADER ***/
 
@@ -202,63 +211,108 @@ body{ background: #fff; .hp; }
 @media only screen and (max-width : 1024px) {
 
 
+
+}
+
+@media only screen and (max-device-width : 1024px) {
+
 }
 
 @media only screen and (max-width : 768px) {
 
-  //Framework
-  .columna{
+	//Framework
+	.columna{
 
-    &.medium-1{ width: 6.3%; }
-    &.medium-2{ width: 14.6%; }
-    &.medium-3{ width: 22.9%; }
-    &.medium-4{ width: 31.2%; }
-    &.medium-5{ width: 39.5%; }
-    &.medium-6{ width: 47.8%; }
-    &.medium-7{ width: 56.1%; }
-    &.medium-8{ width: 64.4%; }
-    &.medium-9{ width: 72.7%; }
-    &.medium-10{ width: 81%; }
-    &.medium-11{ width: 89.3%; }
-    &.medium-12{ width: 97.6%; }
-  }
+		&.medium-1{ width: 6.3%; }
+		&.medium-2{ width: 14.6%; }
+		&.medium-3{ width: 22.9%; }
+		&.medium-4{ width: 31.2%; }
+		&.medium-5{ width: 39.5%; }
+		&.medium-6{ width: 47.8%; }
+		&.medium-7{ width: 56.1%; }
+		&.medium-8{ width: 64.4%; }
+		&.medium-9{ width: 72.7%; }
+		&.medium-10{ width: 81%; }
+		&.medium-11{ width: 89.3%; }
+		&.medium-12{ width: 97.6%; }
+	}
+
+	.span{
+
+		&.medium-1{ width: 8.3%; }
+		&.medium-2{ width: 16.6%; }
+		&.medium-3{ width: 24.9%; }
+		&.medium-4{ width: 33.2%; }
+		&.medium-5{ width: 41.5%; }
+		&.medium-6{ width: 49.8%; }
+		&.medium-7{ width: 58.1%; }
+		&.medium-8{ width: 66.4%; }
+		&.medium-9{ width: 74.7%; }
+		&.medium-10{ width: 83%; }
+		&.medium-11{ width: 91.3%; }
+		&.medium-12{ width: 99.6%; }
+	}
+
+	.medium{ display: block; }
+	.no-medium{ display: none; }
+
+}
+
+@media only screen and (max-device-width : 768px) {
+
+}
+
+@media only screen and (max-width : 620px) {
+
+}
+
+@media only screen and (max-device-width : 620px) {
 
 }
 
 @media only screen and (max-width : 480px) {
 
-  //Framework
-  .columna{
+	//Framework
+	.columna{
+		&.small-1{ width: 6.3%; }
+		&.small-2{ width: 14.6%; }
+		&.small-3{ width: 22.9%; }
+		&.small-4{ width: 31.2%; }
+		&.small-5{ width: 39.5%; }
+		&.small-6{ width: 47.8%; }
+		&.small-7{ width: 56.1%; }
+		&.small-8{ width: 64.4%; }
+		&.small-9{ width: 72.7%; }
+		&.small-10{ width: 81%; }
+		&.small-11{ width: 89.3%; }
+		&.small-12{ width: 97.6%; }
+	}
 
-    &.small-1{ width: 6.3%; }
-    &.small-2{ width: 14.6%; }
-    &.small-3{ width: 22.9%; }
-    &.small-4{ width: 31.2%; }
-    &.small-5{ width: 39.5%; }
-    &.small-6{ width: 47.8%; }
-    &.small-7{ width: 56.1%; }
-    &.small-8{ width: 64.4%; }
-    &.small-9{ width: 72.7%; }
-    &.small-10{ width: 81%; }
-    &.small-11{ width: 89.3%; }
-    &.small-12{ width: 97.6%; }
-  }
+	.span{
 
-  .span{
+		&.small-1{ width: 8.3%; }
+		&.small-2{ width: 16.6%; }
+		&.small-3{ width: 24.9%; }
+		&.small-4{ width: 33.2%; }
+		&.small-5{ width: 41.5%; }
+		&.small-6{ width: 49.8%; }
+		&.small-7{ width: 58.1%; }
+		&.small-8{ width: 66.4%; }
+		&.small-9{ width: 74.7%; }
+		&.small-10{ width: 83%; }
+		&.small-11{ width: 91.3%; }
+		&.small-12{ width: 99.6%; }
 
-    &.small-1{ width: 8.3%; }
-    &.small-2{ width: 16.6%; }
-    &.small-3{ width: 24.9%; }
-    &.small-4{ width: 33.2%; }
-    &.small-5{ width: 41.5%; }
-    &.small-6{ width: 49.8%; }
-    &.small-7{ width: 58.1%; }
-    &.small-8{ width: 66.4%; }
-    &.small-9{ width: 74.7%; }
-    &.small-10{ width: 83%; }
-    &.small-11{ width: 91.3%; }
-    &.small-12{ width: 99.6%; }
+	}
 
-  }
+	.small{ display: block; }
+	.no-small{ display: none; }
+
 }
+
+@media only screen and (max-device-width : 480px) {
+
+}
+
+
 
