@@ -119,6 +119,48 @@ figure {margin: 0;}
   -o-transition:      @transition;
 }
 
+.perspective( @string ){
+	-webkit-perspective: @string;
+	-moz-perspective: @string;
+	-o-perspective: @string;
+	perspective: @string;
+}
+.preserve( @string: preserve-3d){
+	-webkit-transform-style: @string;
+	transform-style: @string;
+}
+
+.backface(@type){
+	-webkit-backface-visibility:@type;
+	backface-visibility:@type;
+}
+
+.rotatey (@deg) {
+	-webkit-transform: 	rotateY(@deg);
+	-moz-transform: 	rotateY(@deg);
+	-ms-transform: 		rotateY(@deg);
+	-o-transform: 		rotateY(@deg);
+}
+
+.translate(@x; @y) {
+  -webkit-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+
+.center-full() {
+  position: absolute;
+  top: 50%; left: 50%;
+  .translate(-50%, -50%);
+}
+
+.center-top() {
+  position: absolute;
+  top: 50%;
+  .translate(0, -50%);
+}
+
 
 /*** FRAMEWORK ***/
 
