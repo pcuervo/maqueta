@@ -249,18 +249,130 @@ body{ background: #fff; .font; }
 /*** FOOTER ***/
 
 /*** MEDIA QUERIES ***/
+// XXLarge screens, min-width 1921px */
+@media only screen and (min-width: 120.063em) { 
+	//Framework
+	.columna{
 
-@media only screen and (max-width : 1024px) {
+		&.xxlarge-1{ width: 6.3%; }
+		&.xxlarge-2{ width: 14.6%; }
+		&.xxlarge-3{ width: 22.9%; }
+		&.xxlarge-4{ width: 31.2%; }
+		&.xxlarge-5{ width: 39.5%; }
+		&.xxlarge-6{ width: 47.8%; }
+		&.xxlarge-7{ width: 56.1%; }
+		&.xxlarge-8{ width: 64.4%; }
+		&.xxlarge-9{ width: 72.7%; }
+		&.xxlarge-10{ width: 81%; }
+		&.xxlarge-11{ width: 89.3%; }
+		&.xxlarge-12{ width: 97.6%; }
+	}
 
+	.span{
 
+		&.xxlarge-1{ width: 8.3%; }
+		&.xxlarge-2{ width: 16.6%; }
+		&.xxlarge-3{ width: 24.9%; }
+		&.xxlarge-4{ width: 33.2%; }
+		&.xxlarge-5{ width: 41.5%; }
+		&.xxlarge-6{ width: 49.8%; }
+		&.xxlarge-7{ width: 58.1%; }
+		&.xxlarge-8{ width: 66.4%; }
+		&.xxlarge-9{ width: 74.7%; }
+		&.xxlarge-10{ width: 83%; }
+		&.xxlarge-11{ width: 91.3%; }
+		&.xxlarge-12{ width: 99.6%; }
+	}
 
-}
+	.xxlarge{ display: block; }
+	.no-xxlarge{ display: none; }
+} /* xxlarge */
 
-@media only screen and (max-device-width : 1024px) {
+// XLarge screens, max-width 1920px
+@media only screen and (max-width: 120em) {
 
-}
+	//Framework
+	.columna{
 
-@media only screen and (max-width : 768px) {
+		&.xlarge-1{ width: 6.3%; }
+		&.xlarge-2{ width: 14.6%; }
+		&.xlarge-3{ width: 22.9%; }
+		&.xlarge-4{ width: 31.2%; }
+		&.xlarge-5{ width: 39.5%; }
+		&.xlarge-6{ width: 47.8%; }
+		&.xlarge-7{ width: 56.1%; }
+		&.xlarge-8{ width: 64.4%; }
+		&.xlarge-9{ width: 72.7%; }
+		&.xlarge-10{ width: 81%; }
+		&.xlarge-11{ width: 89.3%; }
+		&.xlarge-12{ width: 97.6%; }
+	}
+
+	.span{
+
+		&.xlarge-1{ width: 8.3%; }
+		&.xlarge-2{ width: 16.6%; }
+		&.xlarge-3{ width: 24.9%; }
+		&.xlarge-4{ width: 33.2%; }
+		&.xlarge-5{ width: 41.5%; }
+		&.xlarge-6{ width: 49.8%; }
+		&.xlarge-7{ width: 58.1%; }
+		&.xlarge-8{ width: 66.4%; }
+		&.xlarge-9{ width: 74.7%; }
+		&.xlarge-10{ width: 83%; }
+		&.xlarge-11{ width: 91.3%; }
+		&.xlarge-12{ width: 99.6%; }
+	}
+
+	.xlarge{ display: block; }
+	.no-xlarge{ display: none; }
+
+} /* xlarge */
+
+// Large screen, max-width 1441px 
+@media only screen and (max-width: 90.063em) {
+	
+	//Framework
+	.columna{
+
+		&.large-1{ width: 6.3%; }
+		&.large-2{ width: 14.6%; }
+		&.large-3{ width: 22.9%; }
+		&.large-4{ width: 31.2%; }
+		&.large-5{ width: 39.5%; }
+		&.large-6{ width: 47.8%; }
+		&.large-7{ width: 56.1%; }
+		&.large-8{ width: 64.4%; }
+		&.large-9{ width: 72.7%; }
+		&.large-10{ width: 81%; }
+		&.large-11{ width: 89.3%; }
+		&.large-12{ width: 97.6%; }
+	}
+
+	.span{
+
+		&.large-1{ width: 8.3%; }
+		&.large-2{ width: 16.6%; }
+		&.large-3{ width: 24.9%; }
+		&.large-4{ width: 33.2%; }
+		&.large-5{ width: 41.5%; }
+		&.large-6{ width: 49.8%; }
+		&.large-7{ width: 58.1%; }
+		&.large-8{ width: 66.4%; }
+		&.large-9{ width: 74.7%; }
+		&.large-10{ width: 83%; }
+		&.large-11{ width: 91.3%; }
+		&.large-12{ width: 99.6%; }
+	}
+
+	.large{ display: block; }
+	.no-large{ display: none; }	
+
+	body { background: #FF0000; }
+} /* large */
+
+// Medium screens, max-width 1025px
+@media only screen and (max-width: 64.063em) { 
 
 	//Framework
 	.columna{
@@ -298,24 +410,16 @@ body{ background: #fff; .font; }
 	.medium{ display: block; }
 	.no-medium{ display: none; }
 
-}
+	body { background: #00FF00; }
 
-@media only screen and (max-device-width : 768px) {
+} /* medium */
 
-}
-
-@media only screen and (max-width : 620px) {
-
-}
-
-@media only screen and (max-device-width : 620px) {
-
-}
-
-@media only screen and (max-width : 480px) {
+/* Small screens, max-width 640px */
+@media only screen and (max-width: 40em) { 
 
 	//Framework
 	.columna{
+
 		&.small-1{ width: 6.3%; }
 		&.small-2{ width: 14.6%; }
 		&.small-3{ width: 22.9%; }
@@ -344,17 +448,54 @@ body{ background: #fff; .font; }
 		&.small-10{ width: 83%; }
 		&.small-11{ width: 91.3%; }
 		&.small-12{ width: 99.6%; }
-
 	}
 
 	.small{ display: block; }
 	.no-small{ display: none; }
 
-}
+	body { background: #0000FF; }
 
-@media only screen and (max-device-width : 480px) {
+}  /* small */
 
-}
+// Xsmall screens, max-width 400px
+@media only screen and (max-width: 25em) { 
+	//Framework
+	.columna{
+		&.xsmall-1{ width: 6.3%; }
+		&.xsmall-2{ width: 14.6%; }
+		&.xsmall-3{ width: 22.9%; }
+		&.xsmall-4{ width: 31.2%; }
+		&.xsmall-5{ width: 39.5%; }
+		&.xsmall-6{ width: 47.8%; }
+		&.xsmall-7{ width: 56.1%; }
+		&.xsmall-8{ width: 64.4%; }
+		&.xsmall-9{ width: 72.7%; }
+		&.xsmall-10{ width: 81%; }
+		&.xsmall-11{ width: 89.3%; }
+		&.xsmall-12{ width: 97.6%; }
+	}
+
+	.span{
+		&.xsmall-1{ width: 8.3%; }
+		&.xsmall-2{ width: 16.6%; }
+		&.xsmall-3{ width: 24.9%; }
+		&.xsmall-4{ width: 33.2%; }
+		&.xsmall-5{ width: 41.5%; }
+		&.xsmall-6{ width: 49.8%; }
+		&.xsmall-7{ width: 58.1%; }
+		&.xsmall-8{ width: 66.4%; }
+		&.xsmall-9{ width: 74.7%; }
+		&.xsmall-10{ width: 83%; }
+		&.xsmall-11{ width: 91.3%; }
+		&.xsmall-12{ width: 99.6%; }
+
+	}
+
+	.xsmall{ display: block; }
+	.no-xsmall{ display: none; }
+
+	body { background: #FFFF00; }
+} /* xsmall */
 
 
 
