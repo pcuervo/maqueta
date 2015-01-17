@@ -1,0 +1,121 @@
+/*------------------------------------*\
+	#UTILITIES
+\*------------------------------------*/
+
+/**
+ * List reset
+**/
+.list_reset, .list_reset li { margin: 0; padding: 0; list-style: none; }
+
+
+/**
+ * Clear
+**/
+.clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
+
+/**
+ * Visibility
+**/
+.hidden { display: none !important; visibility: hidden !important;}
+.shown{ display: block !important; }
+
+
+
+/**
+ * White space
+**/
+.margin-bottom{ margin-bottom: @unidad; }
+.margin-bottom--small{ margin-bottom: (@unidad/2); }
+.margin-bottom--large{ margin-bottom: (@unidad*2); }
+
+.padding{ padding: @unidad; }
+.padding--small{ padding: (@unidad/2); }
+.padding--large{ padding: (@unidad*2); }
+
+
+/**
+ * Floats
+**/
+.center{ margin-left: auto !important; margin-right: auto !important; float: none !important; }
+.pull-left{ float: left !important; }
+.pull-right{ float: right !important; }
+
+
+/**
+ * Displays
+**/
+.block{ display: block; }
+.inline-block{ display: inline-block; }
+
+
+/**
+ * Alignment
+**/
+.align-top{ vertical-align: top; }
+.align-middle{ vertical-align: middle; }
+.align-bottom{ vertical-align: bottom; }
+
+.center-full{ .center-full(); }
+
+
+
+
+/*------------------------------------*\
+	#SCREENS
+\*------------------------------------*/
+.opacity-gradient{
+	width: 100%;
+	.opacity-gradient;
+	position: relative;
+}
+
+.opacity-gradient--full{
+	width: 100%; height: 100%;
+	.opacity-gradient;
+	position: absolute; top: 0; left: 0;
+}
+
+
+
+/*------------------------------------*\
+	#RESPONSIVE UTILITIES
+\*------------------------------------*/
+
+/**
+ * RESPONSIVE IMAGES
+**/
+.image-responsive{
+	display: block;
+	width: 100%; max-width: 100%; height: auto;
+}
+
+
+/**
+ * Responsive background images for logos
+**/
+.bg-logo-wrapper{
+	display: inline-block; vertical-align: middle;
+	width: 100%;
+	border: 0; margin: 0;
+	font-size: 0; line-height: 0;
+	background-color: transparent; background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat;
+	overflow: hidden;
+}
+.bg-logo{
+	display: block;
+	height: 0;
+	text-indent: -9999px;
+}
+
+/**
+ * Responsive background images for photographies
+**/
+
+.bg-image{
+	background-size: cover !important; background-position: center center;
+	position: relative;
+}
+
+
+

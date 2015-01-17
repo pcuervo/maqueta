@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    #FONTFACE
+\*------------------------------------*/
+
+// @font-face {
+// 	font-family: 'font-name';
+// 	src: url('fonts/font-name.eot');
+// 	src: url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+// 		url('fonts/font-name.woff2') format('woff2'),
+// 		url('fonts/font-name.woff') format('woff'),
+// 		url('fonts/font-name.ttf') format('truetype'),
+// 		url('fonts/font-name.svg#font-name') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+
+
+
+/*------------------------------------*\
+    #GENRALES
+\*------------------------------------*/
+
+/**
+ * HTML general elements
+**/
+body{ font-family: 'font-name'; color: @dark; }
+
+/**
+ * Headers
+**/
+h1, h2, h3, h4, h5, h6{
+	margin-top: 0;
+	//font-family: '';
+}
+
+/**
+ * Titles, subtitles
+**/
+.title{
+
+}
+.sub-title{
+
+}
+
+.bg-image .title, .bg-image .sub-title{ color: @light; }
+.bg-image .title{
+	width: 100%;
+	text-align: center;
+}
+
+/**
+ * Content
+**/
+p{
+	margin: 0 0 1em 0;
+	.font( 20px, 30px, normal, 'font-name' );
+}
+
+
+/**
+ * Image captions
+**/
+.image-caption{
+	//.font( 18px, 28px, normal, 'font-name' ); color: @light-dark;
+}
+
+
+
+
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+
+/**
+ * Text Alignment
+**/
+.text-left{ text-align: left; }
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+
+/**
+ * Text Transform
+**/
+.uppercase{ text-transform: uppercase; }
+.lowercase{ text-transform: lowercase; }
+
+
+
+
+/*------------------------------------*\
+    #INFO
+\*------------------------------------*/

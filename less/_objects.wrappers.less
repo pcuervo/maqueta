@@ -1,0 +1,62 @@
+/**
+ * Main containers 100% height
+**/
+html, body,
+.container, .content-wrapper{
+	height: 100%;
+	background: @light;
+}
+
+/**
+ * These wrappers maintains the scroll and the full-height menu
+**/
+.container {
+	background: @light;
+	position: relative;
+	overflow: hidden;
+}
+.content-wrapper, .content { position: relative; }
+.content-wrapper { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+
+/**
+ * Maintains everything at the same widht
+**/
+.wrapper{
+	width: 90%; max-width: 1280px; min-width: 300px;
+	margin-right: auto; margin-left: auto;
+}
+
+/**
+ * Column wrapper for clearfix and floats
+ * when the columns inside need gutter
+**/
+.row{
+	.clearfix;
+	margin-left: -5px; margin-right: -5px;
+}
+
+/**
+ * Column wrapper for clearfix and floats
+ * when the columns inside do not need gutter
+**/
+.clearfix{
+	.clearfix;
+}
+
+
+/*------------------------------------*\
+    #POSITIONS
+\*------------------------------------*/
+.relative{ position: relative !important; }
+.absolute{ position: absolute !important; }
+
+
+
+
+
+
+
+
+
+
+

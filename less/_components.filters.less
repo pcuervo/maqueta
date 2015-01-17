@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    #FILTERS
+\*------------------------------------*/
+.filters{}
+
+.filters__tabs{ background: @dark; }
+
+.tab-filter{
+    padding: @unidad @unidad @unidad (@unidad/2);
+    .font(12px, 1, 400, 'font-name'); text-transform: uppercase; color: @light; text-decoration: none;
+    background: @dark;
+    white-space: nowrap; text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    .transition();
+}
+.tab-filter:after{
+    content: '\f107';
+    width: 20px; height: 15px;
+    font-family: 'FontAwesome';
+    position:absolute; top: @unidad; right: 0;
+}
+.tab-filter--active{
+    color: @dark;
+    background: @light;
+}
+.tab-filter--active:after{
+    content: '\f106';
+}
+
+
+.filters__content, .filters__content>div{ .transition(); }
+.filters__content>div{
+    height: 0px; padding-bottom: 0px !important;
+    overflow: hidden;
+}
+
+
+.filter{
+    position: relative;
+}
+.filter--active{
+    background: @dark !important;
+    color: @light !important;
+}
+
+
+.filter--info{
+    padding-right: 26px;
+}
+.filter--info span{
+    width: 20px; height: 100%;
+    position: absolute; top: 0; right: 0;
+    background: darken(@dark, 20%);
+}
+.filter--info i{
+    width: 100%;
+    text-align: center; color: @light;
+    position: absolute; top: 50%; right: -1px;
+}
+
+.filter--info i.fa:before{
+    position: relative;
+    top: -6px;
+}
+
+
+.filters__results{
+    padding-bottom: 0;
+    background: @light-dark;
+}
+.filters__results p{
+    margin-bottom: (@unidad/2);
+    .font(16px, 1, 600, 'font-name');
+}
+.filters__results .filter{
+    margin-left: 2px; margin-right: 2px;
+}
+
+
+
+
