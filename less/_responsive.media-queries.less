@@ -1,39 +1,168 @@
-.shown--xmall{  }
-.hidden--xmall{  }
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
 
-.shown--medium{ display: none !important; }
+@small: 	25em;
+@medium: 	40.063em;
+@large: 	64.063em;
+@xlarge: 	90.063em;
+@xxlarge: 	120.063em;
 
-/* min-width 321px */
-@media only screen and (min-width: 25em) {
-	.shown--small{  }
-	.hidden--small{  }
+
+
+
+
+/*------------------------------------*\
+	#VISIBILITY
+\*------------------------------------*/
+
+/**
+ * Xmall
+**/
+
+//these are hidden from their media query up
+.hidden--xmall 		{ display: none !important }
+.hidden--small 		{ display: block !important; }
+.hidden--medium		{ display: block !important; }
+.hidden--large		{ display: block !important; }
+.hidden--xlarge		{ display: block !important; }
+.hidden--xxlarge	{ display: block !important; }
+
+.hidden--xmall-inline 		{ display: none !important }
+.hidden--small-inline 		{ display: inline-block !important; }
+.hidden--medium-inline		{ display: inline-block !important; }
+.hidden--large-inline		{ display: inline-block !important; }
+.hidden--xlarge-inline		{ display: inline-block !important; }
+.hidden--xxlarge-inline		{ display: inline-block !important; }
+
+//these are shown from their media query up
+.shown--xmall 		{ display: block !important; }
+.shown--small 		{ display: none !important; }
+.shown--medium 		{ display: none !important; }
+.shown--large 		{ display: none !important; }
+.shown--xlarge 		{ display: none !important; }
+.shown--xxlarge 	{ display: none !important; }
+
+.shown--xmall 				{ display: inline-block !important; }
+.shown--small--inline		{ display: none !important; }
+.shown--medium--inline 		{ display: none !important; }
+.shown--large--inline 		{ display: none !important; }
+.shown--xlarge--inline 		{ display: none !important; }
+.shown--xxlarge--inline 	{ display: none !important; }
+
+/**
+ * Small
+**/
+@media (min-width: @small) {
+
+	//these are hidden from their media query up
+	.hidden--small 		{ display: none !important; }
+	.hidden--medium		{ display: block !important; }
+	.hidden--large		{ display: block !important; }
+	.hidden--xlarge		{ display: block !important; }
+	.hidden--xxlarge	{ display: block !important; }
+
+	//these are shown from their media query up
+	.shown--small 		{ display: block !important; }
+	.shown--medium 		{ display: none !important; }
+	.shown--large 		{ display: none !important; }
+	.shown--xlarge 		{ display: none !important; }
+	.shown--xxlarge 	{ display: none !important; }
+
+	.shown--small--inline		{ display: inline-block !important; }
+	.shown--medium--inline 		{ display: none !important; }
+	.shown--large--inline 		{ display: none !important; }
+	.shown--xlarge--inline 		{ display: none !important; }
+	.shown--xxlarge--inline 	{ display: none !important; }
+
 }
 
-/* min-width 641px, medium screens */
-@media only screen and (min-width: 40.063em) {
-	.shown--medium{ display: block !important; }
+/**
+ * Medium
+**/
+@media (min-width: @medium) {
+
+	//these are hidden from their media query up
+	.hidden--medium		{ display: none !important; }
+	.hidden--large		{ display: block !important; }
+	.hidden--xlarge		{ display: block !important; }
+	.hidden--xxlarge	{ display: block !important; }
+
+	//these are shown from their media query up
+	.shown--medium 		{ display: block !important; }
+	.shown--large 		{ display: none !important; }
+	.shown--xlarge 		{ display: none !important; }
+	.shown--xxlarge 	{ display: none !important; }
+
+	.shown--medium--inline 		{ display: inline-block !important; }
+	.shown--large--inline 		{ display: none !important; }
+	.shown--xlarge--inline 		{ display: none !important; }
+	.shown--xxlarge--inline 	{ display: none !important; }
+
+
 }
-/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
 
- /* min-width 1025px, large screens */
-@media only screen and (min-width: 64.063em) {}
- /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+/**
+ * Large
+**/
+@media (min-width: @large) {
 
-/* min-width 1441px, xlarge screens */
-@media only screen and (min-width: 90.063em) {}
-/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+	//these are hidden from their media query up
+	.hidden--large		{ display: none !important; }
+	.hidden--xlarge		{ display: block !important; }
+	.hidden--xxlarge	{ display: block !important; }
 
- /* min-width 1921px, xlarge screens */
-@media only screen and (min-width: 120.063em) {}
+	//these are shown from their media query up
+	.shown--large 		{ display: block !important; }
+	.shown--xlarge 		{ display: none !important; }
+	.shown--xxlarge 	{ display: none !important; }
+
+	.shown--large--inline 		{ display: inline-block !important; }
+	.shown--xlarge--inline 		{ display: none !important; }
+	.shown--xxlarge--inline 	{ display: none !important; }
+
+}
+
+/**
+ * Xlarge
+**/
+@media (min-width: @xlarge) {
+
+	//these are hidden from their media query up
+	.hidden--xlarge		{ display: none !important; }
+	.hidden--xxlarge	{ display: block !important; }
+
+	//these are shown from their media query up
+	.shown--xlarge 		{ display: block !important; }
+	.shown--xxlarge 	{ display: none !important; }
+
+	.shown--xlarge--inline 		{ display: inline-block !important; }
+	.shown--xxlarge--inline 	{ display: none !important; }
+
+}
+
+
+/**
+ * XXlarge
+**/
+@media (min-width: @xxlarge) {
+
+	//these are hidden from their media query up
+	.hidden--xxlarge	{ display: none !important; }
+
+	//these are shown from their media query up
+	.shown--xxlarge 	{ display: block !important; }
+
+	.shown--xxlarge--inline 	{ display: inline-block !important; }
+
+}
+
 
 
 /**
  * Retina
 **/
-@media  only screen and (-webkit-min-device-pixel-ratio: 2),
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
 	only screen and (min--moz-device-pixel-ratio: 2),
 	only screen and (-o-min-device-pixel-ratio: 2/1),
 	only screen and (min-device-pixel-ratio: 2),
