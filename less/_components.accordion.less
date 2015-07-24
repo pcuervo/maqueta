@@ -1,0 +1,29 @@
+.accordion {
+	overflow:hidden;
+}
+
+.accordion-section{
+	border-bottom:1px solid @secondary;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+	width:100%;
+	display:inline-block;
+	.transition(all linear 0.15s);
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+	/* Type */
+	text-decoration:none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+	border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+	padding:15px;
+	display:none;
+}

@@ -1,0 +1,44 @@
+/*------------------------------------*\
+	#MODALS
+\*------------------------------------*/
+.modal-wrapper{
+	width: 100%; height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed; top: 0; left: 0;
+	z-index: @zIndex-6;
+	background: @light;
+	.transition;
+	overflow: hidden;
+}
+
+.modal-wrapper.hide{
+	top: -100%;
+}
+
+.modal-wrapper.hide .action-buttons{
+	bottom: -100px;
+}
+
+.modal{
+	width: 100%; height: 100%; max-width: none; max-height: none;
+	background: @light;
+	overflow-y: scroll;
+}
+
+.modal .modal-content{
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+
+/*------------------------------------*\
+    #MEDIUM
+\*------------------------------------*/
+@media (min-width: @medium) {
+
+	.modal--full .modal-content{
+		width: 50%;
+		margin: 0 auto;
+	}
+
+}
