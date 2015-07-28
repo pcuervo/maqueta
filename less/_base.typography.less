@@ -34,61 +34,75 @@ h1, h2, h3, h4, h5, h6{
 	//font-family: '';
 }
 
-/**
- * Titles, subtitles
-**/
-.title{
-
-}
-.sub-title{
-
+h1{
+	.font( 20px, 30px, normal, 'font-name' );
+	& small{
+		.font( 20px, 30px, normal, 'font-name' );
+	}
 }
 
-.bg-image .title, .bg-image .sub-title{ color: @light; }
-.bg-image .title{
-	width: 100%;
-	text-align: center;
+h2{
+	.font( 20px, 30px, normal, 'font-name' );
+	& small{
+		.font( 20px, 30px, normal, 'font-name' );
+	}
 }
+
+h3{
+	.font( 20px, 30px, normal, 'font-name' );
+	& small{
+		.font( 20px, 30px, normal, 'font-name' );
+	}
+}
+
+h4{
+	.font( 20px, 30px, normal, 'font-name' );
+	& small{
+		.font( 20px, 30px, normal, 'font-name' );
+	}
+}
+
+h5{
+	.font( 20px, 30px, normal, 'font-name' );
+	& small{
+		.font( 20px, 30px, normal, 'font-name' );
+	}
+}
+
+h6{
+	.font( 20px, 30px, normal, 'font-name' );
+	& small{
+		.font( 20px, 30px, normal, 'font-name' );
+	}
+}
+
+
 
 /**
  * Content
 **/
-p{
+
+.lead-text{
 	margin: 0 0 1em 0;
 	.font( 20px, 30px, normal, 'font-name' );
 }
 
-
-/**
- * Image captions
-**/
-.image-caption{
-	//.font( 18px, 28px, normal, 'font-name' ); color: @secondary;
+p{
+	margin: 0 0 1em 0;
+	.font( 20px, 30px, normal, 'font-name' );
+	& small{
+		.font( 20px, 30px, normal, 'font-name' );
+	}
 }
 
+p a{
 
+}
 
+blockquote{
 
-/*------------------------------------*\
-    #UTILITIES
-\*------------------------------------*/
+}
 
-/**
- * Text Alignment
-**/
-.text-left{ text-align: left; }
-.text-center{ text-align: center; }
-.text-right{ text-align: right; }
-
-/**
- * Text Transform
-**/
-.uppercase{ text-transform: uppercase; }
-.lowercase{ text-transform: lowercase; }
-
-
-
-
-/*------------------------------------*\
-    #INFO
-\*------------------------------------*/
+.image-caption{
+	.font( 18px, 28px, normal, 'font-name' ); color: @secondary;
+}

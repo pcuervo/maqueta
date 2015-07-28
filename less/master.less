@@ -2,56 +2,49 @@
     #CONTENTS
 \*------------------------------------*/
 
+/** BASE **/
+@import "_base.normalize.less";
+@import "_base.settings.less";
+@import "_base.colors.less";
+@import "_base.global.less";
+@import "_base.typography.less";
+@import "_base.icons.less";
 
-/** SETTINGS ***/
-/* Global............... Globally-available variables and config. */
-@import "_settings.global.less";
-
-
-/** GENERIC **/
-@import "_generic.normalize.less";
-@import "_generic.general.less";
-
+/** LAYOUT ***/
+@import "_layout.grid.less";
+@import "_layout.visibility.less";
+@import "_layout.wrappers.less";
 
 /** TOOLS **/
 @import "_tools.mixins.less";
 @import "_tools.utilities.less";
 
-
-/** RESPONSIVE **/
-@import "_responsive.grid.less";
-@import "_responsive.media-queries.less";
-
-
-/** BASE **/
-@import "_base.colors.less";
-@import "_base.content.less";
-@import "_base.loader.less";
-@import "_base.typography.less";
-@import "_base.z-index.less";
-
-
-/** OBJECTS **/
-/* Wrappers............ Wrapping and constraining elements. */
-@import "_objects.wrappers.less";
-
-
 /** COMPONENTS **/
-@import "_components.header.less";
-@import "_components.menu.less";
-@import "_components.footer.less";
 @import "_components.buttons.less";
-@import "_components.media.less";
+@import "_components.lists.less";
 @import "_components.forms.less";
-@import "_components.filters.less";
-@import "_components.lightbox.less";
-@import "_components.tables.less";
-
 @import "_components.modals.less";
-@import "_components.gallery.less";
-
-@import "_components.smart-forms.less";
-@import "_components.smart-addons.less";
+@import "_components.slider.less";
+@import "_components.cards.less";
+@import "_components.accordions.less";
+@import "_components.tabs.less";
+@import "_components.tables.less";
 @import "_components.heroes.less";
-@import "_components.accordion.less";
 @import "_components.notifications.less";
+@import "_components.calendar.less";
+@import "_components.search.less";
+@import "_components.breadcrumbs.less";
+@import "_components.paginations.less";
+@import "_components.pagers.less";
+@import "_components.tooltips.less";
+@import "_components.maps.less";
+@import "_components.loader.less";
+
+@import "_components.header.less";
+@import "_components.navigation.less";
+@import "_components.footer.less";
+
+@import "_components.images.less";
+@import "_components.video.less";
+@import "_components.audio.less";
+@import "_components.gallery.less";

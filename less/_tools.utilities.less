@@ -13,6 +13,13 @@
 **/
 .clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
 
+/**
+ * Column wrapper for floats
+**/
+.clearfix{
+	.clearfix;
+}
+
 
 /**
  * Visibility
@@ -25,13 +32,13 @@
 /**
  * White space
 **/
-.margin-bottom{ margin-bottom: @unidad; }
-.margin-bottom--small{ margin-bottom: (@unidad/2); }
-.margin-bottom--large{ margin-bottom: (@unidad*2); }
+.margin-bottom{ margin-bottom: @unit; }
+.margin-bottom--small{ margin-bottom: (@unit/2); }
+.margin-bottom--large{ margin-bottom: (@unit*2); }
 
-.padding{ padding: @unidad; }
-.padding--small{ padding: (@unidad/2); }
-.padding--large{ padding: (@unidad*2); }
+.padding{ padding: @unit; }
+.padding--small{ padding: (@unit/2); }
+.padding--large{ padding: (@unit*2); }
 
 
 /**
@@ -57,6 +64,13 @@
 .align-bottom{ vertical-align: bottom; }
 
 .center-full{ .center-full(); }
+
+
+/**
+ * Positions
+**/
+.relative{ position: relative !important; }
+.absolute{ position: absolute !important; }
 
 
 
@@ -117,5 +131,65 @@
 	position: relative;
 }
 
+/**
+ * Text Alignment
+**/
+.text-left{ text-align: left; }
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+
+/**
+ * Text Transform
+**/
+.uppercase{ text-transform: uppercase; }
+.lowercase{ text-transform: lowercase; }
+
+// Copyright 2014 A Medium Corporation
+//
+// z-index.less
+// Medium.com's z-index scale. Z-index values should always be defined in z-index.less. This
+// allows us to at a glance determine relative layers of our application and prevents bugs
+// arrising from arbitrary z-index values. Do not edit the z-index scale! Only add application
+// scoped z-index values.
 
 
+// Z-Index Scale (private vars)
+// --------------------------------------------------
+@zIndex-1:   100;
+@zIndex-2:   200;
+@zIndex-3:   300;
+@zIndex-4:   400;
+@zIndex-5:   500;
+@zIndex-6:   600;
+@zIndex-7:   700;
+@zIndex-8:   800;
+@zIndex-9:   900;
+@zIndex-10: 1000;
+
+
+// Z-Index Applications
+// --------------------------------------------------
+.z-index-1{ z-index: @zIndex-1; }
+.z-index-2{ z-index: @zIndex-2; }
+.z-index-3{ z-index: @zIndex-3; }
+.z-index-4{ z-index: @zIndex-4; }
+.z-index-5{ z-index: @zIndex-5; }
+.z-index-6{ z-index: @zIndex-6; }
+.z-index-7{ z-index: @zIndex-7; }
+.z-index-8{ z-index: @zIndex-8; }
+.z-index-9{ z-index: @zIndex-9; }
+.z-index-10{ z-index:@zIndex-10; }
+
+//@zIndex-1--screenForeground:        @zIndex-1;
+//@zIndex-2--surfaceOver:             @zIndex-2;
+//@zIndex-3--caption:                 @zIndex-3;
+//@zIndex-5--figureOverlay:           @zIndex-5;
+//@zIndex-6--matterLogo:              @zIndex-6;
+//@zIndex-7--nav:                     @zIndex-7;
+//@zIndex-8--transitioningContainer:  @zIndex-8;
+//@zIndex-9--zoomOverlayTarget:       @zIndex-9;
+//@zIndex-10--dev:                    @zIndex-10;
+
+
+// Z-Index Mobile-Notes
+// --------------------------------------------------

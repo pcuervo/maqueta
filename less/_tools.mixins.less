@@ -1,4 +1,6 @@
-/*** MIXINS ***/
+/*------------------------------------*\
+	#TEXT
+\*------------------------------------*/
 
 .font( @size: 1em, @line: 1.4em, @weight: 400, @family: ~'', @style: ~'' ){
 	font-family: @family;
@@ -8,41 +10,38 @@
 	font-style: @style;
 }
 
+
+
+
+/*------------------------------------*\
+	#UTILITIES
+\*------------------------------------*/
+
 .clearfix() {
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
 	.clearfix { zoom:1; }
 }
 
-.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
-	-webkit-border-top-right-radius:    @topright;
-	-webkit-border-bottom-right-radius: @bottomright;
-	-webkit-border-bottom-left-radius:  @bottomleft;
-	-webkit-border-top-left-radius:     @topleft;
-
-	-moz-border-radius-topright:        @topright;
-	-moz-border-radius-bottomright:     @bottomright;
-	-moz-border-radius-bottomleft:      @bottomleft;
-	-moz-border-radius-topleft:         @topleft;
-
-	border-top-right-radius:            @topright;
-	border-bottom-right-radius:         @bottomright;
-	border-bottom-left-radius:          @bottomleft;
-	border-top-left-radius:             @topleft;
-
-	-moz-background-clip:    			padding;
-	-webkit-background-clip: 			padding-box;
-	background-clip:         			padding-box;
+.center-full() {
+	position: absolute;
+	top: 50%; left: 50%;
+	.translate(-50%, -50%);
 }
 
-.border-radius (@radius: 4px) {
-	-webkit-border-radius: @radius;
-	-moz-border-radius:    @radius;
-	border-radius:         @radius;
-	-moz-background-clip:    padding;
-	-webkit-background-clip: padding-box;
-	background-clip:         padding-box;
+.center-top() {
+	position: absolute;
+	top: 50%;
+	.translate(0, -50%);
 }
+
+
+
+
+
+/*------------------------------------*\
+	#ANIMATIONS
+\*------------------------------------*/
 
 .transform( @string ){
 	-webkit-transform: @string;
@@ -102,28 +101,43 @@
 	transform: translate(@x, @y);
 }
 
-.center-full() {
-	position: absolute;
-	top: 50%; left: 50%;
-	.translate(-50%, -50%);
+
+
+
+
+/*------------------------------------*\
+	#STYLE
+\*------------------------------------*/
+
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+
+	-moz-background-clip:    			padding;
+	-webkit-background-clip: 			padding-box;
+	background-clip:         			padding-box;
 }
 
-.center-top() {
-	position: absolute;
-	top: 50%;
-	.translate(0, -50%);
+.border-radius (@radius: 4px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
 }
-
-.opacity-gradient() {
-	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,255,255,0)), color-stop(0.01, rgba(0,0,0,0)), color-stop(0.26, rgba(0,0,0,0.07)), color-stop(0.71, rgba(0,0,0,0.5)), to(rgba(0,0,0,0.7)));
-	background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-	background: -moz-linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-	background: -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-	background: linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-}
-
-
 
 
 
@@ -131,7 +145,6 @@
 /*------------------------------------*\
 	#RESPONSIVE
 \*------------------------------------*/
-
 
 .img-retina(@file-1x; @file-2x;) {
 	background-image: url("@{file-1x}");
@@ -145,4 +158,20 @@
 	only screen and (min-resolution: 2dppx) {
 		background-image: url("@{file-2x}");
 	}
+}
+
+
+
+
+/*------------------------------------*\
+	#GRADIENTS
+\*------------------------------------*/
+
+.opacity-gradient() {
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,255,255,0)), color-stop(0.01, rgba(0,0,0,0)), color-stop(0.26, rgba(0,0,0,0.07)), color-stop(0.71, rgba(0,0,0,0.5)), to(rgba(0,0,0,0.7)));
+	background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -moz-linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
 }

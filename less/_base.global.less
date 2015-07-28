@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/**
+ * Measurements
+**/
+
+@unit: 20px;
+
+
+/**
+ * Selections
+**/
+::selection{ background: @secondary; color: @light; }
+::-moz-selection { background: @secondary; color: @light; }
+
+
+/**
+ * Box sizing
+**/
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/**
+ * Scroll tuning for ios deviced
+**/
+// *{
+// 	-webkit-overflow-scrolling: touch;
+// }
