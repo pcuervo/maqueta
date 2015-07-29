@@ -2,25 +2,111 @@
 	#BUTTONS
 \*------------------------------------*/
 .button{
-	padding: 8px 8px 6px 8px;
-	.font( 1em, 1, 400, 'font-name' ); text-align: center; text-transform: uppercase; text-decoration: none; color: @light;
+	display: inline-block;
+	padding: 8px 20px; border: 2px solid transparent; margin: 8px;
+	.border-radius(3px);
+	.font( 16px, 1.1, 300 ); text-align: center; text-decoration: none; text-transform: lowercase;
+	background-color: darken(@light, 10%); color: @dark;
+	.transition;
+
+	&:hover{
+		background-color: darken(@light, 20%);
+	}
 }
-
-
-
 
 /*------------------------------------*\
-	#STYLES
+	#COLORES
 \*------------------------------------*/
 
-.button--hollow{
-	border: 3px solid @light;
-	background: transparent;
+.button--light{
+	border-color: @light;
+	color: @dark;
+	background: @light;
+
+	&:hover{
+		background-color: darken(@light, 10%);
+	}
 }
 
-.button--rounded{
-	border: 3px solid @light;
+.button--intermediate{
+	border-color: @intermediate;
+	color: @light;
+	background: @intermediate;
+
+	&:hover{
+		background-color: darken(@intermediate, 10%);
+	}
+}
+
+.button--dark{
+	border-color: @dark;
+	color: @light;
+	background: @dark;
+
+	&:hover{
+		background-color: darken(@dark, 10%);
+	}
+}
+
+.button--primary{
+	border-color: @primary;
+	color: @light;
+	background: @primary;
+
+	&:hover{
+		background-color: darken(@primary, 10%);
+	}
+}
+
+.button--secondary{
+	border-color: @secondary;
+	color: @light;
+	background: @secondary;
+
+	&:hover{
+		background-color: darken(@secondary, 10%);
+	}
+}
+
+.button--danger{
+	border-color: @danger;
+	color: @light;
+	background: @danger;
+
+	&:hover{
+		background-color: darken(@danger, 10%);
+	}
+}
+
+.button--success{
+	border-color: @success;
+	color: @light;
+	background: @success;
+
+	&:hover{
+		background-color: darken(@success, 10%);
+	}
+}
+
+.button--warning{
+	border-color: @warning;
+	color: @light;
+	background: @warning;
+
+	&:hover{
+		background-color: darken(@warning, 10%);
+	}
+}
+
+.button--ink{
+	border-color: transparent;
+	color: @secondary;
 	background: transparent;
+
+	&:hover{
+		background-color: transparent;
+		color: darken(@secondary, 10%);
+	}
 }
 
 
@@ -29,29 +115,156 @@
 /*------------------------------------*\
 	#SIZES
 \*------------------------------------*/
+
 .button--small{
-	padding: 6px 6px 4px 6px; border-width: 2px;
-	.font( 0.9em, 1 );
+	padding: 6px 10px;
+	.border-radius(5px);
+	.font( 12px, 1.1, 300 );
+}
+
+.button--medium{
+	padding: 10px 22px;
+	.font( 18px, 1.1, 300 );
 }
 
 .button--large{
-	padding: 10px 10px 8px 10px;
-	.font( 1.6em, 1.3 ); letter-spacing: 1px;
+	padding: 14px 28px;
+	.font( 22px, 1.1, 300 );
 }
-
 
 
 
 /*------------------------------------*\
-	#COLORES
+	#STYLES
 \*------------------------------------*/
+
+.button--hollow{
+	border: 3px solid darken(@light, 10%);
+	background: transparent;
+}
+
+.button--rounded{
+	.border-radius(20px;);
+}
+
+
+
+/*------------------------------------*\
+	#COMBINATIONS
+\*------------------------------------*/
+
+/**
+ * Hollow - Colors
+**/
+.button--hollow.button{
+	border-color: darken(@light, 20%);
+	color: @dark;
+
+	&:hover{
+		background-color: darken(@light, 20%);
+		color: @light;
+	}
+}
+
+.button--hollow.button--light{
+	border-color: darken(@light, 10%);
+	color: @dark;
+
+	&:hover{
+		background-color: darken(@light, 10%);
+		color: @dark;
+	}
+}
+
+.button--hollow.button--intermediate{
+	border-color: @intermediate;
+	color: @intermediate;
+
+	&:hover{
+		background-color: @intermediate;
+	}
+}
+
 .button--hollow.button--dark{
 	border-color: @dark;
 	color: @dark;
-	background: none;
+
+
+	&:hover{
+		background-color: @dark;
+	}
 }
 
-.button--dark{
-	background: @dark;
-	color: @light;
+.button--hollow.button--primary{
+	border-color: @primary;
+	color: @primary;
+
+	&:hover{
+		background-color: @primary;
+	}
+}
+
+.button--hollow.button--secondary{
+	border-color: @secondary;
+	color: @secondary;
+
+	&:hover{
+		background-color: @secondary;
+	}
+}
+
+.button--hollow.button--danger{
+	border-color: @danger;
+	color: @danger;
+
+	&:hover{
+		background-color: @danger;
+	}
+}
+
+.button--hollow.button--success{
+	border-color: @success;
+	color: @success;
+
+	&:hover{
+		background-color: @success;
+	}
+}
+
+.button--hollow.button--warning{
+	border-color: @warning;
+	color: @warning;
+
+	&:hover{
+		background-color: @warning;
+	}
+}
+
+/**
+ * Hollow - Colors
+**/
+
+/*------------------------------------*\
+    #ACTION BUTTONS
+\*------------------------------------*/
+
+.action-buttons{
+	position: fixed; bottom: -100px;
+	z-index: @zIndex-5;
+	.transition;
+}
+.action-buttons--left{
+	left: 20px;
+}
+.action-buttons--right{
+	right: 20px;
+}
+
+.action-buttons.opened, .action-buttons.always-opened{
+	bottom: 20px;
+}
+.button--action{
+	padding: 12px 7px; .border-radius(50%);
+	font-size: 20px;
+	.drop-shadow(0 2px 4px 1px rgba(0,0,0,.3));
 }
