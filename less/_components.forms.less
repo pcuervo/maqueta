@@ -4,26 +4,6 @@
 fieldset{
 	padding: 0; border: none; margin: 0;
 }
-input, button[type='submit']{
-	border: none;
-}
-
-/*------------------------------------*\
-    #FORM ELEMENTS
-\*------------------------------------*/
-input, button[type='submit']{
-	height: 30px;
-	padding: 4px;
-}
-input{
-	border: 1px solid @secondary;
-}
-
-button[type='submit']{
-	background: @primary;
-	color: @light;
-}
-
 
 /*
 --------------------------------------------------
@@ -38,8 +18,7 @@ button[type='submit']{
 
 /* @form wrappers
 ---------------------------------- */
-.smart-forms {
-}
+.smart-forms { }
 
 .smart-container{}
 
@@ -191,6 +170,12 @@ button[type='submit']{
 	.transition(all 0.1s ease-in-out);
 }
 
+.smart-forms .button{
+	margin: 0; border-color: @primary;
+	line-height: 1.4;
+	background-color: @primary; color: @light;
+}
+
 .smart-forms .select > select,
 .smart-forms .select-multiple select{
 	.transition(none);
@@ -322,7 +307,7 @@ button[type='submit']{
 	right: 4px;
 	float: none;
 	height: 34px;
-	line-height: 34px;
+	line-height: 30px;
 	padding: 0 16px;
 	z-index:10;
 }
@@ -477,8 +462,8 @@ button[type='submit']{
 	font-weight: bold;
 	line-height: 20px;
 	text-align: center;
-	background: @secondary;
-	border: 2px solid @secondary;
+	background: @danger;
+	border: 2px solid @danger;
 	text-transform: uppercase;
 	font-family:Helvetica, Arial, sans-serif;
 	-webkit-transition: 0.3s ease-out;
@@ -524,8 +509,8 @@ button[type='submit']{
 /* @toggle switch normal state
 --------------------------------------------------------------- */
 .smart-forms .switch > input:checked + .switch-label {
-	border-color: @primary;
-	background: @primary;
+	border-color: @success;
+	background: @success;
 	padding-left: 33px;
 	color: white;
 }
@@ -556,7 +541,7 @@ button[type='submit']{
 .smart-forms .switch-round > .switch-label:before { width: 33px; }
 .smart-forms .switch-round > .switch-label:after {
 	width: 19px;
-	color: @primary;
+	color: @success;
 	content: "\2022";
 	font:20px/20px Times, Serif;
 	-webkit-border-radius: 13px;
@@ -566,7 +551,7 @@ button[type='submit']{
 }
 
 .smart-forms .switch-round > input:checked + .switch-label { padding-left: 33px; }
-.smart-forms .switch-round > input:checked + .switch-label:after{ color:@primary; }
+.smart-forms .switch-round > input:checked + .switch-label:after{ color:@success; }
 
 
 
@@ -1075,21 +1060,15 @@ button[type='submit']{
 /* @datepicker - requires jquery ui
 ----------------------------------------------- */
 .ui-datepicker {
-	width: 18em;
-	margin-top:14px;
 	display: none;
-	background: #222;
+	width: 18em;
+	border:5px solid @primary; margin-top:14px;
+	background: @light; color: @dark;
 	position:relative;
-	font: 14px/1.55  "Roboto", Arial, Helvetica, sans-serif;
-	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.75);
-	-moz-box-shadow: 0 0 4px rgba(0,0,0,.75);
-	-o-box-shadow: 0 0 4px rgba(0,0,0,.75);
-	box-shadow: 0 0 4px rgba(0,0,0,.75);
-	border:5px solid @primary;
+	.font( 16px, 1.1, 300 );
+	.drop-shadow(0 0 4px rgba(0,0,0,.75));
 	z-index:9999!important;
 	text-align: center;
-	color: #fff;
-
 }
 
 
@@ -1114,7 +1093,7 @@ button[type='submit']{
 .ui-datepicker .ui-state-disabled span{ color:#484848;}
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
-	background:@primary;
+	background: @primary;
 	line-height: 27px;
 	font-size: 15px;
 	padding: 10px;
@@ -1172,12 +1151,17 @@ button[type='submit']{
 }
 
 .ui-datepicker td span:hover,
-.ui-datepicker td a:hover {  background:#333; }
+.ui-datepicker td a:hover { background: @intermediate; }
 .ui-datepicker-today a, .ui-datepicker-today a:hover,
 .ui-datepicker .ui-state-highlight {
 	font-weight: 700;
 	background: @primary!important;
-	color:#fff;
+	color: @light;
+}
+
+.ui-datepicker .ui-state-active{
+	background: @secondary;
+	color: @light;
 }
 
 /* @multiple calendars || not responsive use carefully
@@ -1197,21 +1181,16 @@ button[type='submit']{
 
 /* @ ui buttons
 ---------------------------------------------------------------- */
-.ui-datepicker-buttonpane{ border-top:1px solid #484848; padding:10px;  }
+.ui-datepicker-buttonpane{ padding:10px;  }
 .ui-datepicker-buttonpane button {
-	padding: 8px 12px;
-	margin-right: .2em;
+	margin-right: .2em !important;
 	position: relative;
 	line-height: normal;
-	display: inline-block;
 	-webkit-user-drag: none;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.2);
 	vertical-align: middle;
-	background: #bdc3c7;
-	text-align: center;
 	overflow: visible;
 	cursor: pointer;
-	color: #243140;
 	border:0;
 }
 
@@ -1225,7 +1204,7 @@ button[type='submit']{
 ------------------------------------------------------*/
 .smart-forms .slider-wrapper,
 .smart-forms .sliderv-wrapper{
-	background: @secondary;
+	background: @intermediate;
 	position:relative;
 }
 
@@ -1276,6 +1255,10 @@ button[type='submit']{
 	background-position: 0 0;
 	background-color: @primary;
 }
+
+.smart-forms .ui-slider .ui-slider-handle{ border-color: @light; }
+.smart-forms .ui-slider .ui-slider-handle:before,
+.smart-forms .ui-slider .ui-slider-range { background-color: @primary;  }
 
 .smart-forms .ui-slider.ui-state-disabled .ui-slider-handle,
 .smart-forms .ui-slider.ui-state-disabled .ui-slider-range { filter: inherit; }
@@ -1336,27 +1319,6 @@ button[type='submit']{
 	border-bottom: 8px solid transparent;
 }
 
-/* @ui slider themes
-------------------------------------------------------*/
-.smart-forms .yellow-slider .ui-slider .ui-slider-handle{ border-color:#ed9c28; }
-.smart-forms .yellow-slider .ui-slider .ui-slider-handle:before,
-.smart-forms .yellow-slider .ui-slider .ui-slider-range { background-color:#ed9c28;  }
-.smart-forms .red-slider .ui-slider .ui-slider-handle{ border-color:#e74c3c; }
-.smart-forms .red-slider .ui-slider .ui-slider-handle:before,
-.smart-forms .red-slider .ui-slider .ui-slider-range { background-color:#e74c3c;  }
-.smart-forms .purple-slider .ui-slider .ui-slider-handle{ border-color:#9B59B6; }
-.smart-forms .purple-slider .ui-slider .ui-slider-handle:before,
-.smart-forms .purple-slider .ui-slider .ui-slider-range { background-color:#9B59B6;  }
-.smart-forms .blue-slider .ui-slider .ui-slider-handle{ border-color: @light; }
-.smart-forms .blue-slider .ui-slider .ui-slider-handle:before,
-.smart-forms .blue-slider .ui-slider .ui-slider-range { background-color:#3498db;  }
-.smart-forms .black-slider .ui-slider .ui-slider-handle{ border-color:#34495e; }
-.smart-forms .black-slider .ui-slider .ui-slider-handle:before,
-.smart-forms .black-slider .ui-slider .ui-slider-range { background-color:#34495e;  }
-.smart-forms .green-slider .ui-slider .ui-slider-handle{ border-color:#2ecc71; }
-.smart-forms .green-slider .ui-slider .ui-slider-handle:before,
-.smart-forms .green-slider .ui-slider .ui-slider-range { background-color:#2ecc71;  }
-
 /* @ui timepicker - requires jquery ui
 ------------------------------------------------------*/
 .ui-timepicker-div .ui-widget-header {
@@ -1367,7 +1329,7 @@ button[type='submit']{
 	padding: 10px;
  }
 
-.ui-timepicker-div dl { text-align: left; border:1px solid #484848; border-width:1px 0 0 0; padding:15px 10px; padding-bottom:15px; margin:0;  }
+.ui-timepicker-div dl { text-align: left; padding: 15px 10px; margin:0;  }
 .ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
 .ui-timepicker-div dl dd { margin: 0 10px 15px 40%; }
 .ui-timepicker-div td { font-size: 90%; }
@@ -1377,12 +1339,12 @@ button[type='submit']{
 .ui-timepicker-rtl{ direction: rtl; }
 .ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
 .ui-timepicker-rtl dl dt{ float: right; clear: right; }
-.ui-timepicker-rtl dl dd { margin: 0 40% 10px 10px; background:#555555;  position:relative; top:6px;  }
+.ui-timepicker-rtl dl dd { margin: 0 40% 10px 10px; background:@intermediate;  position:relative; top:6px;  }
 
 .ui-timepicker-div dl .ui_tpicker_hour,
 .ui-timepicker-div dl .ui_tpicker_minute,
 .ui-timepicker-div dl .ui_tpicker_second,
-.ui-timepicker-div dl .ui_tpicker_millisec{ background:#555555;  position:relative;  top:5px;  }
+.ui-timepicker-div dl .ui_tpicker_millisec{ background:@intermediate;  position:relative;  top:5px;  }
 
 /* Shortened version style */
 .ui-timepicker-div.ui-timepicker-oneLine { padding-right: 2px; }
@@ -1453,7 +1415,7 @@ button[type='submit']{
 .ui-autocomplete .ui-state-focus,
 .ui-autocomplete .ui-state-active { }
 .ui-autocomplete .ui-menu-item:hover{
-	background:#222;
+	background: @intermediate;
 }
 
 
@@ -1462,7 +1424,7 @@ button[type='submit']{
 .smart-forms .progress-section{ display:none; }
 .smart-forms .progress-bar {
 	position: relative;
-	background: #555555;
+	background: @intermediate;
 	border-radius: 1px;
 }
 
@@ -1572,31 +1534,6 @@ button[type='submit']{
 .smart-forms .slider-group:after,
 .smart-forms .frm-row:after{ clear: both; }
 
-/* @form columns
------------------------------------ */
-.smart-forms .frm-row .colm{
-	min-height:1px;
-	padding-left:10px;
-	padding-right:10px;
-	position:relative;
-	float:left;
-}
-
-.smart-forms .frm-row .colm1{width:8.33%;}
-.smart-forms .frm-row .colm2{width:16.66%;}
-.smart-forms .frm-row .colm3{width:25%;}
-.smart-forms .frm-row .colm4{width:33.33%;}
-.smart-forms .frm-row .colm5{width:41.66%;}
-.smart-forms .frm-row .colm6{width:50%;}
-.smart-forms .frm-row .colm7{width:58.33%;}
-.smart-forms .frm-row .colm8{width:66.66%;}
-.smart-forms .frm-row .colm9{width:75%;}
-.smart-forms .frm-row .colm10{width:83.33%;}
-.smart-forms .frm-row .colm11{width:91.66%;}
-.smart-forms .frm-row .colm12{width:100%; }
-.smart-forms .frm-row .colm1-5{width:20%;}
-.smart-forms .frm-row .colm1-8{width:12.5%;}
-
 /* @spacers
 --------------------------------------- */
 .smart-forms .spacer{
@@ -1604,21 +1541,6 @@ button[type='submit']{
 	display:block;
 	height:0;
 }
-
-/* @margin spacers :: modify accordingly
--------------------------------------------- */
-.smart-forms .spacer-t10{ margin-top:10px; }
-.smart-forms .spacer-b10{ margin-bottom:10px; }
-.smart-forms .spacer-t15{ margin-top:15p; }
-.smart-forms .spacer-b15{ margin-bottom:15px; }
-.smart-forms .spacer-t20{ margin-top:20px; }
-.smart-forms .spacer-b20{ margin-bottom:20px; }
-.smart-forms .spacer-t25{ margin-top:25px; }
-.smart-forms .spacer-b25{ margin-bottom:25px; }
-.smart-forms .spacer-t30{ margin-top:30px; }
-.smart-forms .spacer-b30{ margin-bottom:30px; }
-.smart-forms .spacer-t40{ margin-top:40px; }
-.smart-forms .spacer-b40{ margin-bottom:40px; }
 
 /* @padding spacers :: modify accordingly
 -------------------------------------------------- */

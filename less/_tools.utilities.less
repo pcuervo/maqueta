@@ -61,12 +61,43 @@
 **/
 .overflow-hidden{ overflow: hidden; }
 
+/**
+ * Geometric Forms
+**/
+.square{
+	position: relative;
+	width: 50%; padding-bottom: 50%;
+	overflow: hidden;
+	position: relative;
+	float: left;
+
+	@media (min-width: @small){
+	}
+	@media (min-width: @medium){
+		width: 33%; padding-bottom: 33%;
+	}
+	@media (min-width: @large){
+	}
+	@media (min-width: @xlarge){
+		width: 25%; padding-bottom: 25%;
+	}
+
+}
+
+.square-content{
+	position: absolute; top: 10px; right: 10px; bottom: 10px; left: 10px;
+	.transition(all 0.1s ease);
+}
+
 
 
 /*------------------------------------*\
     #BOX MODEL
 \*------------------------------------*/
 
+/**
+ * Margin
+**/
 .no-margin{ margin: 0 !important; }
 
 .margin-bottom{ margin-bottom: @unit; }
@@ -84,6 +115,11 @@
 .margin-top-bottom{ margin-top: @unit; margin-bottom: @unit; }
 .margin-top-bottom--small{ margin-top: (@unit/2); margin-bottom: (@unit/2); }
 .margin-top-bottom--large{ margin-top: (@unit*2); margin-bottom: (@unit*2); }
+
+
+/**
+ * Padding
+**/
 
 .padding{ padding: @unit; }
 .padding--small{ padding: (@unit/2); }
@@ -111,6 +147,18 @@
 .padding--sides--small{ padding-left: (@unit/2); padding-right: (@unit/2); }
 .padding--sides--large{ padding-left: (@unit*2); padding-right: (@unit*2); }
 
+/**
+ * Border
+**/
+
+.border{
+	border-width: 1px !important;
+	border-style: solid !important;
+	border-color: @intermediate !important;
+}
+.border-grey{ border-color: @intermediate !important; }
+.border-primary{ border-color: @primary !important; }
+.border-secondary{ border-color: @secondary !important; }
 
 
 /*------------------------------------*\
