@@ -1,17 +1,27 @@
 /*------------------------------------*\
-	#UTILITIES
+    #HELPERS
 \*------------------------------------*/
-
-/**
- * List reset
-**/
-.list_reset, .list_reset li { margin: 0; padding: 0; list-style: none; }
-
 
 /**
  * Clear
 **/
 .clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
+@media ( min-width: @small ) {
+	.clear--small { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+}
+
+@media ( min-width: @medium ) {
+	.clear--small{ clear: none; }
+	.clear--medium { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+}
+
+@media ( min-width: @large ){
+	.clear--small{ clear: none; }
+	.clear--medium{ clear: none; }
+	.clear--large { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+}
+
 
 /**
  * Column wrapper for floats
@@ -20,34 +30,25 @@
 	.clearfix;
 }
 
+/**
+ * Positions
+**/
+.relative{ position: relative !important; }
+.absolute{ position: absolute !important; }
 
 /**
- * Visibility
+ * Opacity
 **/
-.hidden { display: none !important; visibility: hidden !important;}
-.shown{ display: block !important; }
-
-
-
-/**
- * White space
-**/
-.margin-bottom{ margin-bottom: @unit; }
-.margin-bottom--small{ margin-bottom: (@unit/2); }
-.margin-bottom--large{ margin-bottom: (@unit*2); }
-
-.padding{ padding: @unit; }
-.padding--small{ padding: (@unit/2); }
-.padding--large{ padding: (@unit*2); }
-
-
-/**
- * Floats
-**/
-.center{ margin-left: auto !important; margin-right: auto !important; float: none !important; }
-.pull-left{ float: left !important; }
-.pull-right{ float: right !important; }
-
+.opacity-1{ .opacity(10, 0.1); }
+.opacity-2{ .opacity(20, 0.2); }
+.opacity-3{ .opacity(30, 0.3); }
+.opacity-4{ .opacity(40, 0.4); }
+.opacity-5{ .opacity(50, 0.5); }
+.opacity-6{ .opacity(60, 0.6); }
+.opacity-7{ .opacity(70, 0.7); }
+.opacity-8{ .opacity(80, 0.8); }
+.opacity-9{ .opacity(90, 0.9); }
+.opacity-10{ .opacity(100, 1); }
 
 /**
  * Displays
@@ -55,22 +56,149 @@
 .block{ display: block; }
 .inline-block{ display: inline-block; }
 
+/**
+ * Overflows
+**/
+.overflow-hidden{ overflow: hidden; }
+
+
+
+/*------------------------------------*\
+    #BOX MODEL
+\*------------------------------------*/
+
+.no-margin{ margin: 0 !important; }
+
+.margin-bottom{ margin-bottom: @unit; }
+.margin-bottom--small{ margin-bottom: (@unit/2); }
+.margin-bottom--large{ margin-bottom: (@unit*2); }
+
+.margin-top{ margin-top: @unit; }
+.margin-top--small{ margin-top: (@unit/2); }
+.margin-top--large{ margin-top: (@unit*2); }
+
+.margin-sides{ margin-left: @unit; margin-right: @unit; }
+.margin-sides--small{ margin-left: (@unit/2); margin-right: (@unit/2); }
+.margin-sides--large{ margin-left: (@unit*2); margin-right: (@unit*2); }
+
+.margin-top-bottom{ margin-top: @unit; margin-bottom: @unit; }
+.margin-top-bottom--small{ margin-top: (@unit/2); margin-bottom: (@unit/2); }
+.margin-top-bottom--large{ margin-top: (@unit*2); margin-bottom: (@unit*2); }
+
+.padding{ padding: @unit; }
+.padding--small{ padding: (@unit/2); }
+.padding--large{ padding: (@unit*2); }
+
+.no-padding{ padding: 0 !important; }
+
+.padding{ padding: @unit; }
+.padding--small{ padding: (@unit/2); }
+.padding--large{ padding: (@unit*2); }
+
+.padding--top{ padding-top: @unit; }
+.padding--top--small{ padding-top: (@unit/2); }
+.padding--top--large{ padding-top: (@unit*2); }
+
+.padding--bottom{ padding-bottom: @unit; }
+.padding--bottom--small{ padding-bottom: (@unit/2); }
+.padding--bottom--large{ padding-bottom: (@unit*2); }
+
+.padding--top-bottom{ padding-top: @unit; padding-bottom: @unit; }
+.padding--top-bottom--small{ padding-top: (@unit/2); padding-bottom: (@unit/2); }
+.padding--top-bottom--large{ padding-top: (@unit*2); padding-bottom: (@unit*2); }
+
+.padding--sides{ padding-left: @unit; padding-right: @unit; }
+.padding--sides--small{ padding-left: (@unit/2); padding-right: (@unit/2); }
+.padding--sides--large{ padding-left: (@unit*2); padding-right: (@unit*2); }
+
+
+
+/*------------------------------------*\
+    #ALIGNMENT
+\*------------------------------------*/
 
 /**
- * Alignment
+ * Floats
+**/
+.pull-left{ float: left !important; }
+.pull-right{ float: right !important; }
+
+/**
+ * Vertical align
 **/
 .align-top{ vertical-align: top; }
 .align-middle{ vertical-align: middle; }
 .align-bottom{ vertical-align: bottom; }
 
-.center-full{ .center-full(); }
-
+/**
+ * Auto
+**/
+.center{ margin-left: auto !important; margin-right: auto !important; float: none !important; }
 
 /**
- * Positions
+ * Absolute
 **/
-.relative{ position: relative !important; }
-.absolute{ position: absolute !important; }
+.center-full{ .center-full(); }
+.center-top{ .center-top(); }
+.center-bottom{ .center-bottom(); }
+
+
+
+/*------------------------------------*\
+	#IMAGES
+\*------------------------------------*/
+
+/**
+ * Responsive background images
+**/
+.bg-hero{
+	background-size: cover !important; background-position: center center;
+	position: relative;
+}
+
+/**
+ * Responsive images
+**/
+.image-responsive{
+	display: block;
+	width: 100%; max-width: 100%; height: auto;
+}
+
+/**
+ * Responsive background images for logos
+**/
+.bg-logo-wrapper{
+	display: inline-block; vertical-align: middle;
+	width: 100%;
+	border: 0; margin: 0;
+	font-size: 0; line-height: 0;
+	background-color: transparent; background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat;
+	overflow: hidden;
+}
+.bg-logo{
+	display: block;
+	height: 0;
+	text-indent: -9999px;
+}
+
+
+
+/*------------------------------------*\
+	#TEXT
+\*------------------------------------*/
+
+/**
+ * Alignment
+**/
+.text-left{ text-align: left; }
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+
+/**
+ * Transforms
+**/
+.uppercase{ text-transform: uppercase; }
+.lowercase{ text-transform: lowercase; }
 
 
 
@@ -93,82 +221,28 @@
 
 
 /*------------------------------------*\
-	#RESPONSIVE UTILITIES
+	#Z-INDEX
 \*------------------------------------*/
 
 /**
- * RESPONSIVE IMAGES
-**/
-.image-responsive{
-	display: block;
-	width: 100%; max-width: 100%; height: auto;
-}
-
-
-/**
- * Responsive background images for logos
-**/
-.bg-logo-wrapper{
-	display: inline-block; vertical-align: middle;
-	width: 100%;
-	border: 0; margin: 0;
-	font-size: 0; line-height: 0;
-	background-color: transparent; background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat;
-	overflow: hidden;
-}
-.bg-logo{
-	display: block;
-	height: 0;
-	text-indent: -9999px;
-}
-
-/**
- * Responsive background images for photographies
+ * Variables
 **/
 
-.bg-image{
-	background-size: cover !important; background-position: center center;
-	position: relative;
-}
-
-/**
- * Text Alignment
-**/
-.text-left{ text-align: left; }
-.text-center{ text-align: center; }
-.text-right{ text-align: right; }
-
-/**
- * Text Transform
-**/
-.uppercase{ text-transform: uppercase; }
-.lowercase{ text-transform: lowercase; }
-
-// Copyright 2014 A Medium Corporation
-//
-// z-index.less
-// Medium.com's z-index scale. Z-index values should always be defined in z-index.less. This
-// allows us to at a glance determine relative layers of our application and prevents bugs
-// arrising from arbitrary z-index values. Do not edit the z-index scale! Only add application
-// scoped z-index values.
-
-
-// Z-Index Scale (private vars)
-// --------------------------------------------------
-@zIndex-1:   100;
-@zIndex-2:   200;
-@zIndex-3:   300;
-@zIndex-4:   400;
-@zIndex-5:   500;
-@zIndex-6:   600;
-@zIndex-7:   700;
-@zIndex-8:   800;
-@zIndex-9:   900;
+@zIndex-1: 	100;
+@zIndex-2: 	200;
+@zIndex-3: 	300;
+@zIndex-4: 	400;
+@zIndex-5: 	500;
+@zIndex-6: 	600;
+@zIndex-7: 	700;
+@zIndex-8: 	800;
+@zIndex-9: 	900;
 @zIndex-10: 1000;
 
+/**
+ * Applications
+**/
 
-// Z-Index Applications
-// --------------------------------------------------
 .z-index-1{ z-index: @zIndex-1; }
 .z-index-2{ z-index: @zIndex-2; }
 .z-index-3{ z-index: @zIndex-3; }
@@ -179,17 +253,3 @@
 .z-index-8{ z-index: @zIndex-8; }
 .z-index-9{ z-index: @zIndex-9; }
 .z-index-10{ z-index:@zIndex-10; }
-
-//@zIndex-1--screenForeground:        @zIndex-1;
-//@zIndex-2--surfaceOver:             @zIndex-2;
-//@zIndex-3--caption:                 @zIndex-3;
-//@zIndex-5--figureOverlay:           @zIndex-5;
-//@zIndex-6--matterLogo:              @zIndex-6;
-//@zIndex-7--nav:                     @zIndex-7;
-//@zIndex-8--transitioningContainer:  @zIndex-8;
-//@zIndex-9--zoomOverlayTarget:       @zIndex-9;
-//@zIndex-10--dev:                    @zIndex-10;
-
-
-// Z-Index Mobile-Notes
-// --------------------------------------------------

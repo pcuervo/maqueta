@@ -3,7 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PCuervo frameework</title>
-
+		<!-- Sets initial viewport load and disables zooming -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- SEO -->
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<!-- Compatibility -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="cleartype" content="on">
+		<!-- Favicon - generated with http://www.favicomatic.com/ -->
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png" />
@@ -24,125 +32,194 @@
 		<meta name="msapplication-square150x150logo" content="favicon/mstile-150x150.png" />
 		<meta name="msapplication-wide310x150logo" content="favicon/mstile-310x150.png" />
 		<meta name="msapplication-square310x310logo" content="favicon/mstile-310x310.png" />
-
-		<link rel="stylesheet" href="style.css">
-		<!-- *********************** -->
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.min.css">
+		<!-- Google font(s) -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+		<!-- Font awesome -->
 		<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
-		<!-- *********************** -->
-		<meta name="description" content="">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="cleartype" content="on">
 
-		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<!-- *********************** -->
-		<!-- #Typekit code goes here -->
-		<!-- *********************** -->
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Typekit -->
+		<!-- <script src="//use.typekit.net/xxxxxx.js"></script> -->
+		<!-- <script>try{Typekit.load();}catch(e){}</script> -->
 	</head>
 	<body>
 		<!--[if lt IE 9]>
-			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
+			<p class="[ chromeframe ]">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 		<![endif]-->
-		<div class="container">
-			<header>
-				<div class="[ wrapper ] [ shown--small ]">
+		<div class="[ container ]">
+			<header class="[ xmall-12 ][ padding--top-bottom--small ][ bg-primary ]">
+				<div class="[ wrapper ]">
 					<div class="[ row ]">
-						<div class="[ column xmall-6 ][ menu__item ]">
-							<i class="[ icon-imagotype ]"></i>
-							<h1>
-								<i class="[ icon-logotype ]"></i>
-							</h1>
+						<div class="[ column xmall-6 ][ inline-block align-middle ][ menu__item ]">
+							<div class="[ bg-logo-wrapper ]">
+								<a class="[ bg-logo ]" href="#"></a>
+							</div>
 						</div>
-						<div class="[ column xmall-6 ] [ text-center ]">
-							<a class="[ menu__item ]">
-								<i class="[ icon-menu ]"></i>
-							</a>
-							<a class="[ menu__item ]">
-								<i class="[ icon-cart ]"></i>
-								<span class="[ notification notification__number ]">
-									1
-								</span>
+						<div class="[ column xmall-6 ][ inline-block align-middle ][ text-center ]">
+							<a class="[ block ][ button--hollow ][ pull-right ][ js-modal-opener ]" data-modal="nav" href="#">
+								<img class="[ svg icon icon--small ][ color-light ]" src="icons/hamburger.svg" alt="menu">
 							</a>
 						</div>
 					</div>
 				</div>
 			</header>
 			<div class="[ main ]">
-				<div class="[ wrapper ]">
-					<section class="[ margin-bottom--large ]">
-						<h2>Typography</h2>
-						<hr />
-						<h2>H2 - Title</h2>
-						<h3>H3 - Title</h3>
-						<h4>H4 - Title</h4>
-						<h5>H5 - Title</h5>
-						<h6>H6 - Title</h6>
-						<p>Invidiosum nomen est, infame, suspectum. Torquatus, is qui consul cum Cn. Quo modo autem optimum, si bonum praeterea nullum est? Duo Reges: constructio interrete. Scrupulum, inquam, abeunti; Restatis igitur vos; Nam neque virtute retinetur ille in vita, nec iis, qui sine virtute sunt, mors est oppetenda.</p>
-					</section>
 
-					<section class="[ margin-bottom--large ]">
+				<!-- =================================================
+				==== HERO
+				================================================== -->
+				<section class="[ hero ][ padding ][ margin-bottom ]" style="background-image: url('images/background.jpg')">
+					<div class="[ wrapper ]">
+						<div class="[ text-center color-light ]">
+							<h1>PCuervo</h1>
+							<h2 class="[ no-margin ]">The complete style documentation of the PCuervo Framework</h2>
+						</div>
+					</div><!-- wrapper -->
+				</section><!-- hero -->
+
+				<!-- =================================================
+				==== TYPOGRAPHY
+				================================================== -->
+				<section class="[ margin-bottom--large ]">
+					<div class="[ wrapper ][ margin-bottom ]">
+						<h2>Typography</h2>
+						<article class="[ headers ]">
+							<h1>H1 - Ut optime secundum naturam affectum esse. <br />
+								<small>subtitle - Neque enim civitas in seditione beata.</small>
+							</h1>
+							<h2>H2 - Ut optime secundum naturam affectum esse. <br />
+								<small>subtitle - Neque enim civitas in seditione beata.</small>
+							</h2>
+							<h3>H3 - Ut optime secundum naturam affectum esse. <br />
+								<small>subtitle - Neque enim civitas in seditione beata.</small>
+							</h3>
+							<h4>H4 - Ut optime secundum naturam affectum esse. <br />
+								<small>subtitle - Neque enim civitas in seditione beata.</small>
+							</h4>
+							<h5>H5 - Ut optime secundum naturam affectum esse. <br />
+								<small>subtitle - Neque enim civitas in seditione beata.</small>
+							</h5>
+							<h6>H6 - Ut optime secundum naturam affectum esse. <br />
+								<small>subtitle - Neque enim civitas in seditione beata.</small>
+							</h6>
+
+						</article>
+
+						<article class="[ text ]">
+
+							<p class="[ lead-text ]">Invidiosum nomen est, infame, suspectum. Torquatus, is qui consul cum Cn. Quo modo autem optimum, si bonum praeterea nullum est? Duo Reges: constructio interrete. Scrupulum, inquam, abeunti; Restatis igitur vos; Nam neque virtute retinetur ille in vita, nec iis, qui sine virtute sunt, mors est oppetenda.</p>
+							<p>Invidiosum nomen est, infame, suspectum. Torquatus, is qui consul cum Cn. Quo modo autem optimum, si bonum praeterea nullum est? Duo Reges: constructio interrete. Scrupulum, inquam, abeunti; Restatis igitur vos; Nam neque virtute retinetur ille in vita, nec iis, qui sine virtute sunt, mors est oppetenda.</p>
+							<p><small>Is qui consul cum Cn. Quo modo autem optimum.</small></p>
+							<p><a href="#">Is qui consul cum Cn. Quo modo autem optimum.</a></p>
+
+							<blockquote>
+								Quis istum dolorem timet habes inquam cato formam eorum de quibus loquor philosophorum nam diligi et carum esse iucundum est propterea quia tutiorem vitam et voluptatem pleniorem efficit animum autem reliquis rebus.
+							</blockquote>
+						</article>
+					</div><!-- wrapper -->
+				</section>
+
+				<!-- =================================================
+				==== COLORS
+				================================================== -->
+				<section class="[ margin-bottom--large ]">
+					<div class="[ wrapper ][ margin-bottom ]">
 						<h2>Colors</h2>
-						<hr />
 						<div class="[ row ]">
 							<div class="[ column xmall-4 ]">
-							<div class="[ bg-light ][ padding--small ]">
-								<h6 class="[ color-dark ]">Light</h6>
+								<div class="[ bg-light ][ padding--small ]">
+									<h6 class="[ color-dark ]">Light</h6>
+								</div>
+								<div class="[ bg-light-hover ][ padding--small ]">
+									<h6 class="[ color-dark ]">Light - Hover</h6>
+								</div>
 							</div>
-							<div class="[ bg-light-hover ][ padding--small ]">
-								<h6 class="[ color-dark ]">Light - Hover</h6>
+							<div class="[ column xmall-4 ]">
+								<div class="[ bg-intermediate ][ padding--small ]">
+									<h6 class="[ color-light ]">Intermediate</h6>
+								</div>
+								<div class="[ bg-intermediate-hover ][ padding--small ]">
+									<h6 class="[ color-light ]">Intermediate - Hover</h6>
+								</div>
 							</div>
-						</div>
-						<div class="[ column xmall-4 ]">
-							<div class="[ bg-dark ][ padding--small ]">
-								<h6 class="[ color-light ]">Dark</h6>
+							<div class="[ column xmall-4 ]">
+								<div class="[ bg-dark ][ padding--small ]">
+									<h6 class="[ color-light ]">Dark</h6>
+								</div>
+								<div class="[ bg-dark-hover ][ padding--small ]">
+									<h6 class="[ color-light ]">Dark - Hover</h6>
+								</div>
 							</div>
-							<div class="[ bg-dark-hover ][ padding--small ]">
-								<h6 class="[ color-light ]">Dark - Hover</h6>
-							</div>
-						</div>
-						<div class="[ column xmall-4 ]">
-							<div class="[ bg-grey ][ padding--small ]">
-								<h6 class="[ color-light ]">Grey</h6>
-							</div>
-							<div class="[ bg-grey-hover ][ padding--small ]">
-								<h6 class="[ color-light ]">Grey - Hover</h6>
-							</div>
-						</div>
-						<div class="[ column xmall-4 ]">
-							<div class="[ bg-primary ][ padding--small ]">
-								<h6 class="[ color-light ]">Primary</h6>
-							</div>
-							<div class="[ bg-primary-hover ][ padding--small ]">
-								<h6 class="[ color-light ]">Primary - Hover</h6>
-							</div>
-						</div>
-						<div class="[ column xmall-4 ]">
-							<div class="[ bg-highlight ][ padding--small ]">
-								<h6 class="[ color-light ]">Highlight</h6>
-							</div>
-							<div class="[ bg-highlight-hover ][ padding--small ]">
-								<h6 class="[ color-light ]">Highlight - Hover</h6>
-							</div>
-						</div>
-						<div class="[ column xmall-4 ]">
-							<div class="[ bg-danger ][ padding--small ]">
-								<h6 class="[ color-light ]">Danger</h6>
-							</div>
-							<div class="[ bg-danger-hover ][ padding--small ]">
-								<h6 class="[ color-light ]">Danger - Hover</h6>
-							</div>
-						</div>
-						</div><!-- row -->
-					</section>
 
-					<section class="[ margin-bottom--large ]">
+							<div class="[ column xmall-4 ]">
+								<div class="[ bg-primary ][ padding--small ]">
+									<h6 class="[ color-light ]">Primary</h6>
+								</div>
+								<div class="[ bg-primary-hover ][ padding--small ]">
+									<h6 class="[ color-light ]">Primary - Hover</h6>
+								</div>
+							</div>
+							<div class="[ column xmall-4 ]">
+								<div class="[ bg-secondary ][ padding--small ]">
+									<h6 class="[ color-light ]">Secondary</h6>
+								</div>
+								<div class="[ bg-secondary-hover ][ padding--small ]">
+									<h6 class="[ color-light ]">Secondary - Hover</h6>
+								</div>
+							</div>
+							<div class="[ column xmall-4 ]">
+								<div class="[ bg-danger ][ padding--small ]">
+									<h6 class="[ color-light ]">Danger</h6>
+								</div>
+								<div class="[ bg-danger-hover ][ padding--small ]">
+									<h6 class="[ color-light ]">Danger - Hover</h6>
+								</div>
+							</div>
+							<div class="[ column xmall-4 ]">
+								<div class="[ bg-success ][ padding--small ]">
+									<h6 class="[ color-light ]">Success</h6>
+								</div>
+								<div class="[ bg-success-hover ][ padding--small ]">
+									<h6 class="[ color-light ]">Success - Hover</h6>
+								</div>
+							</div>
+							<div class="[ column xmall-4 ]">
+								<div class="[ bg-warning ][ padding--small ]">
+									<h6 class="[ color-light ]">Warning</h6>
+								</div>
+								<div class="[ bg-warning-hover ][ padding--small ]">
+									<h6 class="[ color-light ]">Warning - Hover</h6>
+								</div>
+							</div>
+						</div><!-- row -->
+					</div>
+				</section>
+
+				<!-- =================================================
+				==== BUTTONS
+				================================================== -->
+				<section class="[ margin-bottom--large ]">
+					<div class="[ wrapper ][ margin-bottom ]">
 						<h2>Buttons</h2>
-						<hr />
-						<div class="[ text-center ]">
+						<article class="[ defaults ][ text-center ]">
 							<a href="#" class="[ button ]">Default button</a>
 							<a href="#" class="[ button button--primary ]">Primary button</a>
-							<a href="#" class="[ button button--highlight ]">Highlight button</a>
-							<span class="[ inline-block ][ bg-highlight ]">
+							<a href="#" class="[ button button--secondary ]">Secondary button</a>
+
+							<a href="#" class="[ button button--ink color-danger ]">Negative actions</a>
+
+						</article>
+						<article class="[ sizes ][ text-center ]">
+						</article>
+						<article class="[ styles ][ text-center ]">
+							<span class="[ inline-block ][ bg-secondary ]">
 								<a href="#" class="[ button button--hollow ]">Hollow button</a>
 							</span>
 							<span class="[ inline-block ][ bg-dark ]">
@@ -151,12 +228,17 @@
 							<span class="[ inline-block ][ bg-light ]">
 								<a href="#" class="[ button button--ink ][ color-dark ]">Ink button</a>
 							</span>
-							<a href="#" class="[ button button--ink color-danger ]">Negative actions</a>
+						</article>
+						<article class="[ action buttons ][ text-center ]">
 							<a href="#" class="[ button button__action ]"><i class="[ icon-menu ]"></i></a>
 							<a href="#" class="[ button button__action ]"><i class="[ icon-cart ]"></i></a>
 							<a href="#" class="[ button button__action ]"><i class="[ icon-close ]"></i></a>
-						</div>
-					</section>
+						</article>
+					</div>
+				</section>
+
+
+
 
 					<section class="[ margin-bottom--large ]">
 						<h2>Form</h2>
@@ -193,12 +275,12 @@
 									</label>
 								</fieldset>
 
-								<fieldset class="[ margin-bottom ]">
+								<!-- <fieldset class="[ margin-bottom ]">
 									<label class="field prepend-icon">
 										<input type="search" name="s" id="s" class="gui-input" placeholder="search input">
 										<span class="field-icon"><i class="fa fa-search"></i></span>
 									</label>
-								</fieldset>
+								</fieldset> -->
 
 								<fieldset class="[ margin-bottom ]">
 									<label class="field prepend-icon">
@@ -862,6 +944,8 @@
 		</footer>
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/functions.js"></script>
+		<script type="text/javascript" src="js/plugins.min.js"></script>
 
 		<script type="text/javascript" src="js/js-forms/jquery-ui-custom.min.js"></script>
 		<script type="text/javascript" src="js/js-forms/jquery-ui-touch-punch.min.js"></script>
@@ -880,140 +964,163 @@
 		var $ = jQuery.noConflict();
 		$(function() {
 
-			/* @time picker
-			------------------------------------------------------------------ */
-			$('#timepicker1').timepicker({
-				beforeShow: function(input, inst) {
-						var newclass = 'smart-forms';
-						var smartpikr = inst.dpDiv.parent();
-						if (!smartpikr.hasClass('smart-forms')){
-							inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
-						}
-				}
+			/*------------------------------------*\
+			    #GLOBAL
+			\*------------------------------------*/
 
+			setMainPaddingTop();
+			imgToSvg();
+
+
+			/*------------------------------------*\
+			    #ON RESIZE
+			\*------------------------------------*/
+
+			$( window ).resize(function() {
+				setMainPaddingTop();
 			});
 
-			$('#timepicker2').timepicker({
-				beforeShow: function(input, inst) {
-						var newclass = 'smart-forms';
-						var smartpikr = inst.dpDiv.parent();
-						if (!smartpikr.hasClass('smart-forms')){
-							inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
-						}
-				}
 
-			});
-
-			/* @date time picker
-			------------------------------------------------------------------ */
-			$('#dtimepicker1').datetimepicker({
-				prevText: '<i class="fa fa-chevron-left"></i>',
-				nextText: '<i class="fa fa-chevron-right"></i>',
-				beforeShow: function(input, inst) {
-						var newclass = 'smart-forms';
-						var smartpikr = inst.dpDiv.parent();
-						if (!smartpikr.hasClass('smart-forms')){
-							inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
-						}
-				}
-
-			});
-
-			$('#dtimepicker2').datetimepicker({
-				prevText: '<i class="fa fa-chevron-left"></i>',
-				nextText: '<i class="fa fa-chevron-right"></i>',
-				beforeShow: function(input, inst) {
-						var newclass = 'smart-forms';
-						var smartpikr = inst.dpDiv.parent();
-						if (!smartpikr.hasClass('smart-forms')){
-							inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
-						}
-				}
-
-			});
-
-			/* @date picker
-			------------------------------------------------------------------ */
-			$("#datepicker1").datepicker({
-				numberOfMonths: 1,
-				prevText: '<i class="fa fa-chevron-left"></i>',
-				nextText: '<i class="fa fa-chevron-right"></i>',
-				showButtonPanel: false
-			});
-
-			$("#datepicker2").datepicker({
-				numberOfMonths: 1,
-				prevText: '<i class="fa fa-chevron-left"></i>',
-				nextText: '<i class="fa fa-chevron-right"></i>',
-				showButtonPanel: false
-			});
-
-			/* @month picker
-			------------------------------------------------------------------ */
-			$("#month-picker1").monthpicker({
-				changeYear: false,
-				stepYears: 1,
-				prevText: '<i class="fa fa-chevron-left"></i>',
-				nextText: '<i class="fa fa-chevron-right"></i>',
-				showButtonPanel: true
-			});
-
-			$("#month-picker2").monthpicker({
-				changeYear: false,
-				stepYears: 1,
-				prevText: '<i class="fa fa-chevron-left"></i>',
-				nextText: '<i class="fa fa-chevron-right"></i>',
-				showButtonPanel: true
-			});
-
-			/* @color picker
-			------------------------------------------------------------------ */
-			$("#colorpicker1").spectrum({
-				color: "#FCD208"
-			});
-
-			$("#colorpicker2").spectrum({
-				color: "#D15ADE",
-				showInput: true,
-				showPalette: true,
-				palette: [
-					['black', 'white', 'blanchedalmond'],
-					['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
-				]
-			});
-
-			$("#colorpicker1, #colorpicker2").show();
-
-			/* @numeric stepper
-			------------------------------------------------------------------ */
-			$('#stepper3').stepper({
-				wheel_step: 0.1,
-				arrow_step: 0.2
-			});
-
-			$('#stepper4').stepper({
-				UI: false,
-				allowWheel :false
-			});
-
-			/* @ui slider
-			------------------------------------------------------------------ */
-
-			$('#slider1').slider({
-				min: 0,
-				max: 100,
-				range: true,
-				values: [10, 90],
+			/*------------------------------------*\
+			    #FORMS
+			\*------------------------------------*/
 
 
-				slide: function( event, ui ) {
-					//$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-					$( '.js-starting-price' ).text( '$' + ui.values[ 0 ]);
-					$( '.js-finishing-price' ).text( '$' + ui.values[ 1 ]);
-				}
-			});
-			$( '.js-starting-price' ).text( '$' + $('#slider1').slider( 'values', 0 ) );
-			$( '.js-finishing-price' ).text( '$' + $('#slider1').slider( 'values', 1 ) );
+
+				/* @time picker
+				------------------------------------------------------------------ */
+				$('#timepicker1').timepicker({
+					beforeShow: function(input, inst) {
+							var newclass = 'smart-forms';
+							var smartpikr = inst.dpDiv.parent();
+							if (!smartpikr.hasClass('smart-forms')){
+								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
+							}
+					}
+
+				});
+
+				$('#timepicker2').timepicker({
+					beforeShow: function(input, inst) {
+							var newclass = 'smart-forms';
+							var smartpikr = inst.dpDiv.parent();
+							if (!smartpikr.hasClass('smart-forms')){
+								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
+							}
+					}
+
+				});
+
+				/* @date time picker
+				------------------------------------------------------------------ */
+				$('#dtimepicker1').datetimepicker({
+					prevText: '<i class="fa fa-chevron-left"></i>',
+					nextText: '<i class="fa fa-chevron-right"></i>',
+					beforeShow: function(input, inst) {
+							var newclass = 'smart-forms';
+							var smartpikr = inst.dpDiv.parent();
+							if (!smartpikr.hasClass('smart-forms')){
+								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
+							}
+					}
+
+				});
+
+				$('#dtimepicker2').datetimepicker({
+					prevText: '<i class="fa fa-chevron-left"></i>',
+					nextText: '<i class="fa fa-chevron-right"></i>',
+					beforeShow: function(input, inst) {
+							var newclass = 'smart-forms';
+							var smartpikr = inst.dpDiv.parent();
+							if (!smartpikr.hasClass('smart-forms')){
+								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
+							}
+					}
+
+				});
+
+				/* @date picker
+				------------------------------------------------------------------ */
+				$("#datepicker1").datepicker({
+					numberOfMonths: 1,
+					prevText: '<i class="fa fa-chevron-left"></i>',
+					nextText: '<i class="fa fa-chevron-right"></i>',
+					showButtonPanel: false
+				});
+
+				$("#datepicker2").datepicker({
+					numberOfMonths: 1,
+					prevText: '<i class="fa fa-chevron-left"></i>',
+					nextText: '<i class="fa fa-chevron-right"></i>',
+					showButtonPanel: false
+				});
+
+				/* @month picker
+				------------------------------------------------------------------ */
+				$("#month-picker1").monthpicker({
+					changeYear: false,
+					stepYears: 1,
+					prevText: '<i class="fa fa-chevron-left"></i>',
+					nextText: '<i class="fa fa-chevron-right"></i>',
+					showButtonPanel: true
+				});
+
+				$("#month-picker2").monthpicker({
+					changeYear: false,
+					stepYears: 1,
+					prevText: '<i class="fa fa-chevron-left"></i>',
+					nextText: '<i class="fa fa-chevron-right"></i>',
+					showButtonPanel: true
+				});
+
+				/* @color picker
+				------------------------------------------------------------------ */
+				$("#colorpicker1").spectrum({
+					color: "#FCD208"
+				});
+
+				$("#colorpicker2").spectrum({
+					color: "#D15ADE",
+					showInput: true,
+					showPalette: true,
+					palette: [
+						['black', 'white', 'blanchedalmond'],
+						['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
+					]
+				});
+
+				$("#colorpicker1, #colorpicker2").show();
+
+				/* @numeric stepper
+				------------------------------------------------------------------ */
+				$('#stepper3').stepper({
+					wheel_step: 0.1,
+					arrow_step: 0.2
+				});
+
+				$('#stepper4').stepper({
+					UI: false,
+					allowWheel :false
+				});
+
+				/* @ui slider
+				------------------------------------------------------------------ */
+
+				$('#slider1').slider({
+					min: 0,
+					max: 100,
+					range: true,
+					values: [10, 90],
+
+
+					slide: function( event, ui ) {
+						//$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+						$( '.js-starting-price' ).text( '$' + ui.values[ 0 ]);
+						$( '.js-finishing-price' ).text( '$' + ui.values[ 1 ]);
+					}
+				});
+				$( '.js-starting-price' ).text( '$' + $('#slider1').slider( 'values', 0 ) );
+				$( '.js-finishing-price' ).text( '$' + $('#slider1').slider( 'values', 1 ) );
 
 });
 

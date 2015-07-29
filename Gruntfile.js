@@ -16,27 +16,12 @@ module.exports = function(grunt) {
             }
           }
         },
-        imagemin: {                          // Task
-          static: {                          // Target
-            options: {                       // Target options
-              optimizationLevel: 3
-            },
-            files: {                         // Dictionary of files
-              //'images/*.png': 'images/*.png', // 'destination': 'source'
-              //'images/*.jpg': 'images/*.jpg',
-              //'images/*.gif': 'images/*.gif'
+        cssmin : {
+            css:{
+                src: 'css/style.css',
+                dest: 'css/style.min.css'
             }
-          },
-          dynamic: {                         // Another target
-            files: [{
-              expand: true,                  // Enable dynamic expansion
-              cwd: 'images/',                   // Src matches are relative to this path
-              src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-              dest: 'images/'    // Destination path prefix
-            }]
-          }
         },
-
         // running `grunt less` will compile once
         less: {
             development: {
@@ -48,41 +33,30 @@ module.exports = function(grunt) {
                     report: 'min'
                 },
                 files: {
-                    "style.css": "less/master.less"
+                    "css/style.css": "less/master.less"
                 }
             }
         },
         watch: {
             css: {
                 files: ["less/*.less", ],
-                tasks: ["less"]
+                tasks: ["less", "cssmin"]
             },
             js: {
                 files: ["js/functions.js", "js/plugins.js"],
                 tasks: ["uglify"]
             }
         },
-        express:{
-            all:{
-                options:{
-                    port: 8888,
-                    hostname: 'localhost',
-                    base: ['.'],
-                    livereload: true
-                }
-            }
-        }
     });
 
     // Load Grunt tasks automatically
     require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 
     // Default task(s).
-    grunt.registerTask('default', ['jshint','uglify','less','imagemin']);
+    grunt.registerTask('default', ['jshint','uglify','less']);
+
     //Watch
     grunt.registerTask('dev', [ 'watch' ]);
 
-    //Serer
-    grunt.registerTask('server', [ 'express', 'watch' ]);
 
 };

@@ -21,58 +21,126 @@
     #GENRALES
 \*------------------------------------*/
 
-/**
- * HTML general elements
-**/
-body{ font-family: 'font-name'; color: @dark; }
+body{
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif!important;
+	font-size: 100%;
+	color: @dark;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+	font-size-adjust: 0.5;
+}
 
 /**
  * Headers
 **/
 h1, h2, h3, h4, h5, h6{
 	margin-top: 0;
-	//font-family: '';
 }
 
+h1, h2, h3{ margin-bottom: (@unit*2); }
+
+h4, h5, h6{ margin-bottom: @unit; }
+
 h1{
-	.font( 20px, 30px, normal, 'font-name' );
+	.font( 32px, 1.1, 600 );
 	& small{
-		.font( 20px, 30px, normal, 'font-name' );
+		.font( 24px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 40px, 1.1, 600 );
+		& small{
+			.font( 30px, 1 );
+		}
+	}
+	@media (min-width: @large){
+		.font( 48px, 1.1, 600 );
+		& small{
+			.font( 34px, 1 );
+		}
 	}
 }
 
 h2{
-	.font( 20px, 30px, normal, 'font-name' );
+	.font( 26px, 1.1, 600 );
 	& small{
-		.font( 20px, 30px, normal, 'font-name' );
+		.font( 20px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 32px, 1.1, 600 );
+		& small{
+			.font( 24px, 1 );
+		}
+	}
+	@media (min-width: @large){
+		.font( 36px, 1.1, 600 );
+		& small{
+			.font( 28px, 1 );
+		}
 	}
 }
 
 h3{
-	.font( 20px, 30px, normal, 'font-name' );
+	.font( 22px, 1.1, 600 );
 	& small{
-		.font( 20px, 30px, normal, 'font-name' );
+		.font( 18px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 24px, 1.1 );
+		& small{
+			.font( 20px, 1 );
+		}
+	}
+	@media (min-width: @large){
+		.font( 28px, 1.1 );
+		& small{
+			.font( 22px, 1 );
+		}
 	}
 }
 
 h4{
-	.font( 20px, 30px, normal, 'font-name' );
+	.font( 20px, 1.1, 600 );
 	& small{
-		.font( 20px, 30px, normal, 'font-name' );
+		.font( 18px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 22px, 1.1 );
+		& small{
+			.font( 20px, 1 );
+		}
 	}
 }
 
 h5{
-	.font( 20px, 30px, normal, 'font-name' );
+	.font( 18px, 1.1 );
 	& small{
-		.font( 20px, 30px, normal, 'font-name' );
+		.font( 14px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 20px, 1.1 );
+		& small{
+			.font( 16px, 1 );
+		}
 	}
 }
 
 h6{
-	.font( 20px, 30px, normal, 'font-name' );
+	.font( 16px, 1.1 );
 	& small{
-		.font( 20px, 30px, normal, 'font-name' );
+		.font( 12px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 18px, 1.1 );
+		& small{
+			.font( 14px, 1 );
+		}
 	}
 }
 
@@ -83,26 +151,57 @@ h6{
 **/
 
 .lead-text{
-	margin: 0 0 1em 0;
-	.font( 20px, 30px, normal, 'font-name' );
+	margin: 0 0 1.2em 0;
+
+	.font( 20px, 1.4 );
+	& small{
+		.font( 18px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 24px, 1.1 );
+		& small{
+			.font( 20px, 1 );
+		}
+	}
 }
 
 p{
 	margin: 0 0 1em 0;
-	.font( 20px, 30px, normal, 'font-name' );
+
+	.font( 16px, 1.4 );
 	& small{
-		.font( 20px, 30px, normal, 'font-name' );
+		.font( 12px, 1 );
+	}
+
+	@media (min-width: @medium){
+		.font( 18px, 1.1 );
+		& small{
+			.font( 14px, 1 );
+		}
 	}
 }
 
 p a{
-
+	color: @secondary;
 }
 
 blockquote{
+	padding: 0 0 0 40px; border-left: 3px solid @secondary; margin: 0;
+	font-style: italic;
+	.font( 16px, 1.4 );
+	& small{
+		.font( 12px, 1 );
+	}
 
+	@media (min-width: @medium){
+		.font( 18px, 1.1 );
+		& small{
+			.font( 14px, 1 );
+		}
+	}
 }
 
 .image-caption{
-	.font( 18px, 28px, normal, 'font-name' ); color: @secondary;
+	.font( 18px, 28px, normal ); color: @secondary;
 }

@@ -5,15 +5,19 @@
 /**
  * Brand
 **/
-@light: 			#fff;    //blanco
-@primary:			#1aa2dc; //azul
-@secondary: 		#b2b2b2; //gris-light
-@dark: 				#343434; //gris-obscuro
+@light: 		#ffffff; 	// white
+@intermediate: 	#ccd1d9; 	// grey
+@dark: 			#343434; 	// very dark grey
+@primary:		#00a8ab; 	// green-ish
+@secondary: 	#e74c3c; 	// red
+
 
 /**
  * Status
 **/
-@danger: 		#e74c3c;
+@danger: 		#ed5565; //red
+@warning: 		#f6bb42; //Yellow
+@success: 		#8cc152; //bright green
 
 /**
  * Social media
@@ -34,14 +38,30 @@
  * Color
 **/
 .color-light{ color: @light; }
+.color-intermediate{ color: @intermediate; }
+.color-dark{ color: @dark; }
 .color-primary{ color: @primary; }
 .color-secondary{ color: @secondary; }
-.color-dark{ color: @dark; }
+.color-danger{ color: @danger; }
+.color-warning{ color: @warning; }
+.color-success{ color: @success; }
 
 /**
  * Backgrounds
 **/
 .bg-light{ background-color: @light; }
-.bg-primary{ background-color: @primary; }
-.bg-secondary{ background-color: @secondary; }
+.bg-light-hover{ background-color: darken(@light, 10%); }
+.bg-intermediate{ background-color: @intermediate; }
+.bg-intermediate-hover{ background-color: darken(@intermediate, 10%); }
 .bg-dark{ background-color: @dark; }
+.bg-dark-hover{ background-color: darken(@dark, 10%); }
+.bg-primary{ background-color: @primary; }
+.bg-primary-hover{ background-color: darken(@primary, 10%); }
+.bg-secondary{ background-color: @secondary; }
+.bg-secondary-hover{ background-color: darken(@secondary, 10%); }
+.bg-danger{ background-color: @danger; }
+.bg-danger-hover{ background-color: darken(@danger, 10%); }
+.bg-warning{ background-color: @warning; }
+.bg-warning-hover{ background-color: darken(@warning, 10%); }
+.bg-success{ background-color: @success; }
+.bg-success-hover{ background-color: darken(@success, 10%); }

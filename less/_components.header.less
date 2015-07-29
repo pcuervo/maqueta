@@ -1,28 +1,14 @@
-/*------------------------------------*\
-	#HEADER
-\*------------------------------------*/
-
-
-.header-wrapper{
-	width: 100%;
+header{
 	position: fixed; top: 0; left: 0;
-	background: @light;
 	.z-index-10;
 	.transition();
 }
-.header-wrapper--fixed{ background: rgba(255, 255, 255, 0.5); }
-.header-wrapper--fixed .header{ margin-top: (@unit/2); margin-bottom: (@unit/2); }
 
-.header{
-	margin-top: @unit; margin-bottom: @unit;
-	.transition();
-}
-.menu-trigger{}
-.menu-trigger i{
-	padding: (@unit/3) 0;
-	font-size: 1.4em;
+.bg-logo-wrapper{
+	width: 100px;
+	.img-retina('../images/cuervo-logo.png'; '../images/cuervo-logo@2x.png';);
 }
 
-.bg-logo-wrapper--logo-name{
-	.img-retina('images/logo.png'; 'images/logo@2x.png';)
+.bg-logo{
+	padding-bottom: 34.7058824%;  // height/width of image
 }

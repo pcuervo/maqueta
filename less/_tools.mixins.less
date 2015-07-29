@@ -23,6 +23,22 @@
 	.clearfix { zoom:1; }
 }
 
+.opacity(@ms, @modern){
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity={@ms})";
+	filter: alpha(opacity=@ms);
+	-moz-opacity: @modern;
+	-khtml-opacity: @modern;
+	opacity: @modern;
+}
+
+
+
+
+
+/*------------------------------------*\
+	#ALIGNMENT
+\*------------------------------------*/
+
 .center-full() {
 	position: absolute;
 	top: 50%; left: 50%;
@@ -33,6 +49,12 @@
 	position: absolute;
 	top: 50%;
 	.translate(0, -50%);
+}
+
+.center-bottom() {
+	position: absolute;
+	bottom: 5%; left: 50%;
+	.translate(-50%, 0);
 }
 
 
@@ -106,7 +128,7 @@
 
 
 /*------------------------------------*\
-	#STYLE
+	#BODER RADIUSES
 \*------------------------------------*/
 
 .border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
