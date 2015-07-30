@@ -59,13 +59,47 @@ function setMainPaddingTop(){
 \*------------------------------------*/
 
 /**
+ * Toggle action buttons
+ */
+ function toggleActionButtons(){
+	//Get the header height so we can now when
+	//to change the heade state
+	var headerHeight = getHeaderHeight();
+	//Scrolled pixels in Y axis
+	var sy = getScrollY();
+	//Compare the two numbers, when they are the same or less
+	//add fixed class to the header.
+	if ( sy >= headerHeight ) {
+		$('.action-buttons').addClass('opened');
+	} else {
+		$('.action-buttons').removeClass('opened');
+	}
+}// toggleActionButtons
+
+/**
  * Toggle Modal
  * @param element to be toggled
 **/
 function toggleModal(element){
-	$(element).toggleClass('hide');
+
 	$('body').toggleClass('overflow-hidden');
+
+	if ( undefined === element ){
+		$('.modal-wrapper').addClass('hide');
+		return;
+	}
+
+	$(element).toggleClass('hide');
+
 }//toggleModal
+
+/**
+ * Toggle any element
+ * @param element to be shown
+**/
+function toggleVisibility(element){
+	$(element).toggleClass('opened');
+}// toggleVisibility
 
 
 

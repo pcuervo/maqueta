@@ -58,8 +58,8 @@
 				<div class="[ wrapper ]">
 					<div class="[ row ]">
 						<div class="[ column xmall-6 ][ inline-block align-middle ][ menu__item ]">
-							<div class="[ bg-logo-wrapper ]">
-								<a class="[ bg-logo ]" href="#"></a>
+							<div class="[ bg-image-placeholder__wrapper bg-image-placeholder__wrapper__logo ]">
+								<a class="[ bg-image-placeholder bg-image-placeholder__logo ]" href="#"></a>
 							</div>
 						</div>
 						<div class="[ column xmall-6 ][ inline-block align-middle ][ text-center ]">
@@ -346,6 +346,9 @@
 				<section class="[ margin-bottom--large ]">
 					<div class="[ wrapper ][ margin-bottom ]">
 						<h2>Buttons</h2>
+
+						<!-- Colors
+						================================================== -->
 						<article class="[ colors ][ margin-bottom ]">
 							<h3>Colors</h3>
 							<a href="#" class="[ button ]">Default button</a>
@@ -359,6 +362,9 @@
 							<a href="#" class="[ button button--warning ]">Warning button</a>
 							<a href="#" class="[ button button--ink ]">Ink button</a>
 						</article>
+
+						<!-- Sizes
+						================================================== -->
 						<article class="[ sizes ][ margin-bottom ]">
 							<h3>Sizes</h3>
 							<a href="#" class="[ button button--small ]">Small button</a>
@@ -366,11 +372,17 @@
 							<a href="#" class="[ button button--medium ]">Medium button</a>
 							<a href="#" class="[ button button--large ]">Large button</a>
 						</article>
+
+						<!-- Styles
+						================================================== -->
 						<article class="[ styles ][ margin-bottom ]">
 							<h3>Styles</h3>
 							<a href="#" class="[ button button--hollow ]">Hollow button</a>
 							<a href="#" class="[ button button--rounded ]">Rounded button</a>
 						</article>
+
+						<!-- Combinations
+						================================================== -->
 						<article class="[ styles ][ margin-bottom ]">
 							<h3>Combinations</h3>
 							<section class="[ margin-bottom ]">
@@ -452,7 +464,7 @@
 					<div class="[ margin-bottom ]">
 						<div class="[ wrapper ]">
 							<h2>Forms</h2>
-							<article class="[ smart-forms ]">
+							<article class="[ form ]">
 								<form method="post" action="" id="form-ui">
 									<fieldset class="[ margin-bottom ]">
 										<label class="field">
@@ -1033,7 +1045,7 @@
 										</div><!-- end .form-footer section -->
 
 								</form>
-							</div><!-- end .smart-forms section -->
+							</div><!-- end .form section -->
 						</div><!-- wrapper -->
 					</div>
 				</section>
@@ -1128,9 +1140,95 @@
 				</section>
 
 			</div><!-- main -->
+
+			<section class="[ action-buttons action-buttons--right ]">
+				<a href="#" class="[ button button--primary button--action ][ js-modal-opener ]" data-modal="nav"><i class="[ icon-menu ]"></i></a>
+			</section><!-- action-buttons -->
+
+			<section class="[ modal-wrapper modal-nav ][ hide ]">
+				<div class="[ modal modal--full ]">
+					<div class="[ modal-content ]">
+						<article class="[ menu ]">
+							<div class="[ row ][ bg-dark ]">
+								<?php /*<a href="<?php echo site_url(''); ?>" class="[ span xmall-6 ][ border ][ button button--light button--ink ][ padding ]"><i class="[ icon-sillones ]"></i>quiero comprar</a>
+								<?php /* <a href="<?php echo site_url('');?>" class="[ span xmall-6 ][ border ][ button button--light button--ink ][ padding ]"><i class="[ icon-vender ]"></i>quiero vender</a> */ ?>
+								<a href="<?php echo site_url('como-funciona');?>" class="[ span xmall-6 ][ border ][ button button--light button--ink ][ padding--medium ]"><i class="[ icon-graph ]"></i>¿cómo funciona?</a>
+								<a href="<?php echo site_url('');?>" class="[ span xmall-6 ][ border ][ button button--light button--ink ][ padding--medium ]"><i class="[ icon-messages ]"></i>blog</a>
+								<?php if( is_user_logged_in() ) {  ?>
+									<a href="<?php echo site_url('mi-cuenta');?>" class="[ span xmall-12 ][ border ][ button button--light button--ink ][ bg-primary ][ padding--medium ]"><i class="[ icon-user ]"></i>mi cuenta</a>
+									<a href="<?php echo wp_logout_url( site_url() ) ?>" class="[ span xmall-12 ][ border ][ button button--light button--ink ][ bg-highlight ][ padding--medium ]"><i class="[ icon ]"></i>Logout</a>
+								<?php } else { ?>
+									<a href="<?php echo site_url('mi-cuenta');?>" class="[ span xmall-12 ][ border ][ button button--light button--ink ][ bg-primary ][ padding--medium ]"><i class="[ icon-user ]"></i>log in o registrate</a>
+								<?php } ?>
+							</div>
+						</article><!-- menu -->
+
+						<article class="[ search ]">
+							<div class="[ padding ][ border ]">
+								<?php get_product_search_form(); ?>
+							</div><!-- padding -->
+						</article><!-- search -->
+
+						<article class="[ categorias ]">
+							<div class="[ padding ]">
+								<h3 class="[ text-center ][ no-margin ]">Categorías</h3>
+							</div>
+							<div class="[ row ]">
+								<a href="#" class="[ span xmall-6 ][ border ][ button button--primary button--ink ][ padding ]"><img class="[ svg icon icon--small ][ color-light ]" src="icons/hamburger.svg" alt="menu">category</a>
+							</div>
+						</article><!-- categorias -->
+						<artcile class="[ initial ]">
+							<div class="[ action-buttons action-buttons--right ][ always-opened ]">
+								<a href="#" class="[ button button--primary button--action ][ pull-right ][ js-modal-closer ]"><i class="[ icon-close ]"></i></a>
+							</div><!-- action-buttons -->
+						</artcile><!-- action-buttons -->
+					</div><!-- modal-content -->
+				</div>
+			</section>
+
 		</div><!-- container -->
 
-		<footer>
+		<footer class="">
+			<section class="[ border ][ padding ]">
+				<div class="[ wrapper ]">
+					<h3 class="[ title ] [ text-center ]">Suscríbete a nuestro newsletter</h3>
+					<form class="[ form form--large ]" action="http://mobilly.us10.list-manage1.com/subscribe/post" method="POST">
+
+						<fieldset class="[ columna xmall-12 medium-6 ][ center ]">
+							<div class="smart-widget sm-right smr-50">
+								<label class="field">
+									<input type="text" name="sub" id="sub" class="gui-input" placeholder="tu@correo.com">
+								</label>
+								<button type="submit" class="[ button ]">
+									<img class="[ svg icon icon--small ][ color-light ]" src="icons/hamburger.svg" alt="menu">
+								</button>
+							</div><!-- end .smart-widget section -->
+						</fieldset>
+
+					</form>
+				</div><!-- wrapper -->
+			</section><!-- border -->
+
+			<section class="[ text-center ][ margin-bottom ][ padding ]">
+				<a href="#"><small>¿Quiénes somos?</small></a>
+				<a href="#"><small>¿Cómo funciona?</small></a>
+				<a href="#"><small>FAQs</small></a>
+				<a href="#"><small>Trabaja con nosotros</small></a>
+				<a href="#"><small>Devoluciones y reembolsos</small></a>
+				<a href="#"><small>Términos y condiciones</small></a>
+				<a href="#"><small>Aviso de privacidad</small></a>
+				<a href="#"><small>Ayúdanos a transportar</small></a>
+				<a href="#"><small>Contacto</small></a>
+			</section>
+
+			<section class="[ text-center ]">
+				<p>
+					<small>
+						© 2014 Mobbily S.A de C.V.<br />
+						todos los derechos reservados.
+					</small>
+				</p>
+			</section>
 		</footer>
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -1158,8 +1256,32 @@
 			    #GLOBAL
 			\*------------------------------------*/
 
+			/**
+			 * On load
+			**/
+
 			setMainPaddingTop();
 			imgToSvg();
+
+
+			/**
+			 * Triggered events
+			**/
+			$(window).scroll(function(){
+				toggleActionButtons();
+			});
+
+			$('.js-modal-opener').on('click', function(e){
+				e.preventDefault();
+				var modal = $(this).data('modal');
+				var modal = '.modal-'+modal;
+				toggleModal(modal);
+			});
+
+			$('.js-modal-closer').on('click', function(e){
+				e.preventDefault();
+				toggleModal();
+			});
 
 
 			/*------------------------------------*\
@@ -1181,9 +1303,9 @@
 				------------------------------------------------------------------ */
 				$('#timepicker1').timepicker({
 					beforeShow: function(input, inst) {
-							var newclass = 'smart-forms';
+							var newclass = 'form';
 							var smartpikr = inst.dpDiv.parent();
-							if (!smartpikr.hasClass('smart-forms')){
+							if (!smartpikr.hasClass('form')){
 								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
 							}
 					}
@@ -1192,9 +1314,9 @@
 
 				$('#timepicker2').timepicker({
 					beforeShow: function(input, inst) {
-							var newclass = 'smart-forms';
+							var newclass = 'form';
 							var smartpikr = inst.dpDiv.parent();
-							if (!smartpikr.hasClass('smart-forms')){
+							if (!smartpikr.hasClass('form')){
 								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
 							}
 					}
@@ -1207,9 +1329,9 @@
 					prevText: '<i class="fa fa-chevron-left"></i>',
 					nextText: '<i class="fa fa-chevron-right"></i>',
 					beforeShow: function(input, inst) {
-							var newclass = 'smart-forms';
+							var newclass = 'form';
 							var smartpikr = inst.dpDiv.parent();
-							if (!smartpikr.hasClass('smart-forms')){
+							if (!smartpikr.hasClass('form')){
 								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
 							}
 					}
@@ -1220,9 +1342,9 @@
 					prevText: '<i class="fa fa-chevron-left"></i>',
 					nextText: '<i class="fa fa-chevron-right"></i>',
 					beforeShow: function(input, inst) {
-							var newclass = 'smart-forms';
+							var newclass = 'form';
 							var smartpikr = inst.dpDiv.parent();
-							if (!smartpikr.hasClass('smart-forms')){
+							if (!smartpikr.hasClass('form')){
 								inst.dpDiv.wrap('<div class="'+newclass+'"></div>');
 							}
 					}

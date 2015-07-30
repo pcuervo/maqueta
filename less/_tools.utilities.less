@@ -215,19 +215,26 @@
 /**
  * Responsive background images for logos
 **/
-.bg-logo-wrapper{
+.bg-image-placeholder__wrapper{
 	display: inline-block; vertical-align: middle;
-	width: 100%;
 	border: 0; margin: 0;
 	font-size: 0; line-height: 0;
 	background-color: transparent; background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat;
 	overflow: hidden;
 }
-.bg-logo{
+
+.bg-image-placeholder__wrapper__logo{
+	width: 100px;
+	.img-retina('../images/cuervo-logo.png'; '../images/cuervo-logo@2x.png';);
+}
+
+.bg-image-placeholder{
 	display: block;
 	height: 0;
 	text-indent: -9999px;
 }
+
+.bg-image-placeholder__logo{ padding-bottom: 34.7058824%;  /* (height/width)*100 of image */ }
 
 
 

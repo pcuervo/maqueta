@@ -18,7 +18,7 @@ fieldset{
 
 /* @form wrappers
 ---------------------------------- */
-.smart-forms { }
+.form { }
 
 .smart-container{}
 
@@ -33,11 +33,11 @@ fieldset{
 
 /* @form helper classes
 --------------------------------------------------------------- */
-.smart-forms .section{ margin-bottom:22px; }
-.smart-forms .smart-link{ color: @primary; text-decoration:none; }
-.smart-forms .smart-link:hover{ text-decoration: underline; }
-.smart-forms .tagline{ height:0; border-top:1px solid #484848; text-align:center;  }
-.smart-forms .tagline span{
+.form .section{ margin-bottom:22px; }
+.form .smart-link{ color: @primary; text-decoration:none; }
+.form .smart-link:hover{ text-decoration: underline; }
+.form .tagline{ height:0; border-top:1px solid #484848; text-align:center;  }
+.form .tagline span{
 	text-transform:uppercase;
 	display:inline-block;
 	position:relative;
@@ -49,11 +49,11 @@ fieldset{
 
 /* @form label + field :: field class is useful for validation
 ---------------------------------------------------------------------- */
-.smart-forms .field{ display:block; position:relative; }
-.smart-forms .field-icon i { color:@secondary; position:relative; }
-.smart-forms .field-label { display: block; margin-bottom: 7px; }
-.smart-forms .field-label.colm{ padding-top:12px; }
-.smart-forms .field-label em{
+.form .field{ display:block; position:relative; }
+.form .field-icon i { color:@secondary; position:relative; }
+.form .field-label { display: block; margin-bottom: 7px; }
+.form .field-label.colm{ padding-top:12px; }
+.form .field-label em{
 	color:#e74c3c;
 	font-size:14px;
 	font-style:normal;
@@ -66,8 +66,8 @@ fieldset{
 
 /* @form body + footer
 ------------------------------------------------------------------- */
-.smart-forms .form-body{ }
-.smart-forms .form-footer {
+.form .form-body{ }
+.form .form-footer {
 	// overflow:hidden;
 	// padding:20px 25px;
 	// padding-top:25px;
@@ -76,47 +76,47 @@ fieldset{
 
 /* @crossbrowser placeholder styling :: modern browsers only IE10+
 ------------------------------------------------------------------------ */
-.smart-forms input[type=search] { -webkit-appearance: textfield; }
-.smart-forms ::-webkit-search-decoration,
-.smart-forms ::-webkit-search-cancel-button { -webkit-appearance: none; }
-.smart-forms input:invalid { -moz-box-shadow: none; box-shadow: none;  }
-.smart-forms input::-webkit-input-placeholder,
-.smart-forms textarea::-webkit-input-placeholder { color: @secondary; }
-.smart-forms input:focus::-webkit-input-placeholder,
-.smart-forms textarea:focus::-webkit-input-placeholder { color: @secondary; }
-.smart-forms input:-moz-placeholder,
-.smart-forms textarea:-moz-placeholder {  color: @secondary; }
-.smart-forms input:focus:-moz-placeholder,
-.smart-forms textarea:focus:-moz-placeholder { color: @secondary; }
-.smart-forms input::-moz-placeholder,
-.smart-forms textarea::-moz-placeholder {  color: @secondary; opacity: 1; }
-.smart-forms input:focus::-moz-placeholder,
-.smart-forms textarea:focus::-moz-placeholder { color: @secondary; opacity: 1; }
-.smart-forms input:-ms-input-placeholder,
-.smart-forms textarea:-ms-input-placeholder {  color: @secondary; }
-.smart-forms input:focus:-ms-input-placeholder,
-.smart-forms textarea:focus:-ms-input-placeholder { color: @secondary; }
+.form input[type=search] { -webkit-appearance: textfield; }
+.form ::-webkit-search-decoration,
+.form ::-webkit-search-cancel-button { -webkit-appearance: none; }
+.form input:invalid { -moz-box-shadow: none; box-shadow: none;  }
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder { color: @secondary; }
+.form input:focus::-webkit-input-placeholder,
+.form textarea:focus::-webkit-input-placeholder { color: @secondary; }
+.form input:-moz-placeholder,
+.form textarea:-moz-placeholder {  color: @secondary; }
+.form input:focus:-moz-placeholder,
+.form textarea:focus:-moz-placeholder { color: @secondary; }
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {  color: @secondary; opacity: 1; }
+.form input:focus::-moz-placeholder,
+.form textarea:focus::-moz-placeholder { color: @secondary; opacity: 1; }
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {  color: @secondary; }
+.form input:focus:-ms-input-placeholder,
+.form textarea:focus:-ms-input-placeholder { color: @secondary; }
 
 /* @element general styling :: fonts :: adjust accordingly
 ------------------------------------------------------------- */
-.smart-forms label,
-.smart-forms input,
-.smart-forms button,
-.smart-forms select,
-.smart-forms textarea {
+.form label,
+.form input,
+.form button,
+.form select,
+.form textarea {
 	font-size: 14px;
 	outline:none;
 }
 
 /* @remove browser specific styling
 ----------------------------------------------- */
-.smart-forms .gui-input,
-.smart-forms .gui-textarea,
-.smart-forms .select > select,
-.smart-forms input[type="button"],
-.smart-forms input[type="submit"],
-.smart-forms input[type="search"],
-.smart-forms .select-multiple select {
+.form .gui-input,
+.form .gui-textarea,
+.form .select > select,
+.form input[type="button"],
+.form input[type="submit"],
+.form input[type="search"],
+.form .select-multiple select {
 	-webkit-tap-highlight-color:transparent;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-appearance: none;
@@ -126,25 +126,25 @@ fieldset{
 	border-radius: 0px;
 }
 
-.smart-forms input[type="search"]::-webkit-search-decoration,
-.smart-forms input[type="search"]::-webkit-search-cancel-button,
-.smart-forms input[type="search"]::-webkit-search-results-button,
-.smart-forms input[type="search"]::-webkit-search-results-decoration {
+.form input[type="search"]::-webkit-search-decoration,
+.form input[type="search"]::-webkit-search-cancel-button,
+.form input[type="search"]::-webkit-search-results-button,
+.form input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
 /* @labels font-size styling :: adjust to fit your needs
 --------------------------------------------------------- */
-.smart-forms .switch,
-.smart-forms .option,
-.smart-forms .field-label{ font-size:14px; }
+.form .switch,
+.form .option,
+.form .field-label{ font-size:14px; }
 
 /* @prevent user selection for usability purposes
 ----------------------------------------------------- */
-.smart-forms .radio,
-.smart-forms .button,
-.smart-forms .checkbox,
-.smart-forms .switch > label{
+.form .radio,
+.form .button,
+.form .checkbox,
+.form .switch > label{
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
@@ -154,40 +154,40 @@ fieldset{
 
 /* @universal rules for all elements
 ---------------------------------------------------- */
-.smart-forms .tooltip,
-.smart-forms .gui-input,
-.smart-forms .notification,
-.smart-forms .gui-textarea,
-.smart-forms .select > select,
-.smart-forms .select-multiple select{
+.form .tooltip,
+.form .gui-input,
+.form .notification,
+.form .gui-textarea,
+.form .select > select,
+.form .select-multiple select{
 	.transition(all 0.25s ease-in-out);
 	outline:none;
 }
 
-.smart-forms .checkbox,
-.smart-forms .radio,
-.smart-forms .button{
+.form .checkbox,
+.form .radio,
+.form .button{
 	.transition(all 0.1s ease-in-out);
 }
 
-.smart-forms .button{
+.form .button{
 	margin: 0; border-color: @primary;
 	line-height: 1.4;
 	background-color: @primary; color: @light;
 }
 
-.smart-forms .select > select,
-.smart-forms .select-multiple select{
+.form .select > select,
+.form .select-multiple select{
 	.transition(none);
 }
 
 /* @control border-size :: color etc for these elements
 ----------------------------------------------------------- */
-.smart-forms .select,
-.smart-forms .gui-input,
-.smart-forms .gui-textarea,
-.smart-forms .select > select,
-.smart-forms .select-multiple select{
+.form .select,
+.form .gui-input,
+.form .gui-textarea,
+.form .select > select,
+.form .select-multiple select{
 	background: @light;
 	position: relative;
 	vertical-align: top;
@@ -204,9 +204,9 @@ fieldset{
 
 /* @styling inputs and textareas
 ------------------------------------------- */
-.smart-forms .gui-input,
-.smart-forms .gui-textarea { padding:10px; }
-.smart-forms .gui-textarea {
+.form .gui-input,
+.form .gui-textarea { padding:10px; }
+.form .gui-textarea {
 	resize: none;
 	line-height: 19px;
 	overflow: auto;
@@ -216,7 +216,7 @@ fieldset{
 
 /* @hint below textareas
 ---------------------------------------- */
-.smart-forms .input-hint {
+.form .input-hint {
 	padding: 10px;
 	display: block;
 	margin-top: -4px;
@@ -231,8 +231,8 @@ fieldset{
 
 /* @form selects :: dropdowns
 -------------------------------------------------- */
-.smart-forms .select { border:0; z-index:10; }
-.smart-forms .select > select {
+.form .select { border:0; z-index:10; }
+.form .select > select {
 	display: block;
 	padding:9px 10px;
 	-webkit-appearance:none;
@@ -245,16 +245,16 @@ fieldset{
 	margin: 0;
 }
 
-.smart-forms .select > select::-ms-expand { display: none; }
-.smart-forms .select:before,
-.smart-forms .select:after {
+.form .select > select::-ms-expand { display: none; }
+.form .select:before,
+.form .select:after {
 	content: '';
 	position: absolute;
 	pointer-events: none;
 	z-index:15;
 }
 
-.smart-forms .select .arrow {
+.form .select .arrow {
 	position: absolute;
 	top: 9px;
 	right: 5px;
@@ -265,8 +265,8 @@ fieldset{
 	z-index:16;
 }
 
-.smart-forms .select .arrow:after,
-.smart-forms .select .arrow:before {
+.form .select .arrow:after,
+.form .select .arrow:before {
 	content: '';
 	position: absolute;
 	font: 12px monospace;
@@ -276,10 +276,10 @@ fieldset{
 	left:6px;
 }
 
-.smart-forms .select .arrow:before { content:'\25BC'; bottom:4px; }
-.smart-forms .select .double:after { content:'\25B2'; top:-1px;  }
-.smart-forms .select .double:before { content:'\25BC'; bottom:-1px; }
-.smart-forms .select-multiple select {
+.form .select .arrow:before { content:'\25BC'; bottom:4px; }
+.form .select .double:after { content:'\25B2'; top:-1px;  }
+.form .select .double:before { content:'\25BC'; bottom:-1px; }
+.form .select-multiple select {
 	width:100%;
 	height: 123px;
 	padding: 10px;
@@ -287,8 +287,8 @@ fieldset{
 
 /* @file inputs :: file uploaders
 -------------------------------------------------------- */
-.smart-forms .file{ display:block; width:100%; }
-.smart-forms .file .gui-file{
+.form .file{ display:block; width:100%; }
+.form .file .gui-file{
 	width:100%;
 	height:100%;
 	cursor:pointer;
@@ -301,7 +301,7 @@ fieldset{
 	right:0;
 }
 
-.smart-forms .file .button {
+.form .file .button {
 	position: absolute;
 	top: 4px;
 	right: 4px;
@@ -314,50 +314,50 @@ fieldset{
 
 /* @form element :hover state
 -------------------------------------------- */
-.smart-forms .gui-input:hover,
-.smart-forms .gui-textarea:hover,
-.smart-forms .select > select:hover,
-.smart-forms .select-multiple select:hover,
-.smart-forms .gui-input:hover ~ .input-hint,
-.smart-forms .file .gui-file:hover + .gui-input,
-.smart-forms .gui-textarea:hover ~ .input-hint{
+.form .gui-input:hover,
+.form .gui-textarea:hover,
+.form .select > select:hover,
+.form .select-multiple select:hover,
+.form .gui-input:hover ~ .input-hint,
+.form .file .gui-file:hover + .gui-input,
+.form .gui-textarea:hover ~ .input-hint{
 	border-width: 2px;
 }
 
 /* @form element :focus state
 -------------------------------------------------------- */
-.smart-forms .gui-input:focus,
-.smart-forms .gui-textarea:focus,
-.smart-forms .select > select:focus,
-.smart-forms .select-multiple select:focus{ border-color: @primary; color: @primary !important; }
-.smart-forms .gui-textarea:focus{  height: 120px; }
-.smart-forms .select > select:focus { z-index:10; z-index:20\9; }
-.smart-forms .gui-input:focus ~ .field-icon i,
-.smart-forms .gui-textarea:focus ~ .field-icon i{ color:@primary; }
-.smart-forms .select-multiple select:focus,
-.smart-forms .gui-input:focus ~ .input-hint,
-.smart-forms .gui-textarea:focus ~ .input-hint,
-.smart-forms .file .gui-file:focus + .gui-input{ border-color: @primary; }
-.smart-forms .select > select:focus + .arrow{ color:@primary; }
+.form .gui-input:focus,
+.form .gui-textarea:focus,
+.form .select > select:focus,
+.form .select-multiple select:focus{ border-color: @primary; color: @primary !important; }
+.form .gui-textarea:focus{  height: 120px; }
+.form .select > select:focus { z-index:10; z-index:20\9; }
+.form .gui-input:focus ~ .field-icon i,
+.form .gui-textarea:focus ~ .field-icon i{ color:@primary; }
+.form .select-multiple select:focus,
+.form .gui-input:focus ~ .input-hint,
+.form .gui-textarea:focus ~ .input-hint,
+.form .file .gui-file:focus + .gui-input{ border-color: @primary; }
+.form .select > select:focus + .arrow{ color:@primary; }
 
 /* @radio + checkbox option elements
 ----------------------------------------------------- */
-.smart-forms .option {
+.form .option {
 	position: relative;
 	padding-right:15px;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.smart-forms .option > input {
+.form .option > input {
 	position: absolute;
 	height: inherit;
 	width: inherit;
 	opacity: 0;
 	left: 0;
 }
-.smart-forms .checkbox,
-.smart-forms .radio {
+.form .checkbox,
+.form .radio {
 	position: relative;
 	margin-right: 2px;
 	background: @light;
@@ -370,8 +370,8 @@ fieldset{
 	top: 5px;
 }
 
-.smart-forms .checkbox:before,
-.smart-forms .radio:before {
+.form .checkbox:before,
+.form .radio:before {
 	content: '';
 	display: none;
 	-webkit-box-sizing: content-box;
@@ -383,12 +383,12 @@ fieldset{
 }
 
 
-.smart-forms input:checked + .checkbox:before,
-.smart-forms input:checked + .radio:before {
+.form input:checked + .checkbox:before,
+.form input:checked + .radio:before {
 	display: block;
 }
 
-.smart-forms .checkbox:before {
+.form .checkbox:before {
 	position: absolute;
 	top: 4px;
 	left: 3px;
@@ -403,16 +403,16 @@ fieldset{
 	transform: rotate(-45deg);
 }
 
-.smart-forms input:checked + .checkbox,
-.smart-forms input:checked + .radio{ border: 3px solid @primary; }
-.smart-forms .radio {
+.form input:checked + .checkbox,
+.form input:checked + .radio{ border: 3px solid @primary; }
+.form .radio {
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	-o-border-radius: 20px;
 	border-radius: 20px;
 
 }
-.smart-forms .radio:before {
+.form .radio:before {
 	margin: 4px;
 	width: 7px;
 	height: 7px;
@@ -426,24 +426,24 @@ fieldset{
 
 /* @radio + checkbox :hover state
 -------------------------------------------------- */
-.smart-forms input:hover + .checkbox,
-.smart-forms input:hover + .radio{
+.form input:hover + .checkbox,
+.form input:hover + .radio{
 	border-color: @primary;
 }
 
 /* @radio + checkbox :focus state
 --------------------------------------------------- */
-.smart-forms input:focus + .checkbox,
-.smart-forms input:focus + .radio{
+.form input:focus + .checkbox,
+.form input:focus + .radio{
 	border-color: @primary;
 }
 
-.smart-forms input:focus + .radio:before{ background: @primary; }
-.smart-forms input:focus + .checkbox:before{ border-color: @primary; }
+.form input:focus + .radio:before{ background: @primary; }
+.form input:focus + .checkbox:before{ border-color: @primary; }
 
 /* @toggle switch elements
 -------------------------------------------------- */
-.smart-forms .switch {
+.form .switch {
 	cursor:pointer;
 	position: relative;
 	padding-right:10px;
@@ -451,7 +451,7 @@ fieldset{
 	margin-bottom:5px;
 	height: 26px;
 }
-.smart-forms .switch > .switch-label {
+.form .switch > .switch-label {
 	cursor:pointer;
 	display: inline-block;
 	position: relative;
@@ -471,8 +471,8 @@ fieldset{
 	-o-transition: 0.3s ease-out;
 	transition: 0.3s ease-out;
 }
-.smart-forms .switch > .switch-label + span{ display:inline-block; padding-left:5px; position:relative; top:-7px; }
-.smart-forms .switch > .switch-label:before {
+.form .switch > .switch-label + span{ display:inline-block; padding-left:5px; position:relative; top:-7px; }
+.form .switch > .switch-label:before {
 	content: attr(data-off);
 	position: absolute;
 	top: 1px;
@@ -480,7 +480,7 @@ fieldset{
 	width: 33px;
 }
 
-.smart-forms .switch > .switch-label:after {
+.form .switch > .switch-label:after {
 	content:"";
 	margin: 1px;
 	width: 19px;
@@ -489,7 +489,7 @@ fieldset{
 	background: #fff;
 }
 
-.smart-forms .switch > input {
+.form .switch > input {
 	-webkit-appearance: none;
 	position: absolute;
 	width: inherit;
@@ -502,26 +502,26 @@ fieldset{
 
 /* @toggle switch focus state
 -------------------------------------------------------------- */
-.smart-forms .switch > input:focus { outline: none; }
-.smart-forms .switch > input:focus + .switch-label { color: #fff; border-color: @primary; background:@primary; }
-.smart-forms .switch > input:focus + .switch-label:after { background: #fff; }
+.form .switch > input:focus { outline: none; }
+.form .switch > input:focus + .switch-label { color: #fff; border-color: @primary; background:@primary; }
+.form .switch > input:focus + .switch-label:after { background: #fff; }
 
 /* @toggle switch normal state
 --------------------------------------------------------------- */
-.smart-forms .switch > input:checked + .switch-label {
+.form .switch > input:checked + .switch-label {
 	border-color: @success;
 	background: @success;
 	padding-left: 33px;
 	color: white;
 }
 
-.smart-forms .switch > input:checked + .switch-label:before {
+.form .switch > input:checked + .switch-label:before {
 	content: attr(data-on);
 	left: 1px;
 	top:1px;
 }
 
-.smart-forms .switch > input:checked + .switch-label:after {
+.form .switch > input:checked + .switch-label:after {
 	margin: 1px;
 	width: 19px;
 	height: 19px;
@@ -530,16 +530,16 @@ fieldset{
 
 /* @toggle switch normal state focus
 --------------------------------------------------------------------------------- */
-.smart-forms .switch > input:checked:focus + .switch-label { background: #16a085; border-color: #16a085; }
-.smart-forms .switch-round > .switch-label {
+.form .switch > input:checked:focus + .switch-label { background: #16a085; border-color: #16a085; }
+.form .switch-round > .switch-label {
 	-webkit-border-radius: 13px;
 	-moz-border-radius: 13px;
 	-o-border-radius: 13px;
 	border-radius: 13px;
 }
-.smart-forms .switch-round > .switch-label + span{ top:-2px; }
-.smart-forms .switch-round > .switch-label:before { width: 33px; }
-.smart-forms .switch-round > .switch-label:after {
+.form .switch-round > .switch-label + span{ top:-2px; }
+.form .switch-round > .switch-label:before { width: 33px; }
+.form .switch-round > .switch-label:after {
 	width: 19px;
 	color: @success;
 	content: "\2022";
@@ -550,35 +550,35 @@ fieldset{
 	border-radius: 13px;
 }
 
-.smart-forms .switch-round > input:checked + .switch-label { padding-left: 33px; }
-.smart-forms .switch-round > input:checked + .switch-label:after{ color:@success; }
+.form .switch-round > input:checked + .switch-label { padding-left: 33px; }
+.form .switch-round > input:checked + .switch-label:after{ color:@success; }
 
 
 
 /* @social buttons :: facebook :: twitter :: google +
 ---------------------------------------------------- */
-.smart-forms .twitter,
-.smart-forms .twitter:hover,
-.smart-forms .twitter:focus,
-.smart-forms .facebook,
-.smart-forms .facebook:hover,
-.smart-forms .facebook:focus,
-.smart-forms .googleplus,
-.smart-forms .googleplus:hover,
-.smart-forms .googleplus:focus { color:#fff; text-shadow: 0 1px rgba(0, 0, 0, 0.08); }
-.smart-forms .facebook { background-color:#3b5998; }
-.smart-forms .twitter { background-color:#00acee;  }
-.smart-forms .googleplus { background-color:#dd4b39; }
-.smart-forms .facebook:hover,
-.smart-forms .facebook:focus { background-color:#25385F;  }
-.smart-forms .twitter:hover,
-.smart-forms .twitter:focus { background-color:#00749F;  }
-.smart-forms .googleplus:hover,
-.smart-forms .googleplus:focus { background-color:#8D2418;  }
-.smart-forms .span-left{ padding-left:52px; text-align:left; }
-.smart-forms .btn-social { position:relative; margin-bottom:5px;  }
-.smart-forms .btn-social i{ font-size:22px; position:relative; top:2px;    }
-.smart-forms .btn-social span{
+.form .twitter,
+.form .twitter:hover,
+.form .twitter:focus,
+.form .facebook,
+.form .facebook:hover,
+.form .facebook:focus,
+.form .googleplus,
+.form .googleplus:hover,
+.form .googleplus:focus { color:#fff; text-shadow: 0 1px rgba(0, 0, 0, 0.08); }
+.form .facebook { background-color:#3b5998; }
+.form .twitter { background-color:#00acee;  }
+.form .googleplus { background-color:#dd4b39; }
+.form .facebook:hover,
+.form .facebook:focus { background-color:#25385F;  }
+.form .twitter:hover,
+.form .twitter:focus { background-color:#00749F;  }
+.form .googleplus:hover,
+.form .googleplus:focus { background-color:#8D2418;  }
+.form .span-left{ padding-left:52px; text-align:left; }
+.form .btn-social { position:relative; margin-bottom:5px;  }
+.form .btn-social i{ font-size:22px; position:relative; top:2px;    }
+.form .btn-social span{
 	-webkit-border-radius:3px 0 0 3px;
 	-moz-border-radius:3px 0 0 3px;
 	-o-border-radius:3px 0 0 3px;
@@ -589,24 +589,24 @@ fieldset{
 	width:42px;
 	left:0;
 }
-.smart-forms .twitter span{ background-color:#009AD5; }
-.smart-forms .facebook span{ background-color:#31497D; }
-.smart-forms .googleplus span{ background-color:#C03121; }
+.form .twitter span{ background-color:#009AD5; }
+.form .facebook span{ background-color:#31497D; }
+.form .googleplus span{ background-color:#C03121; }
 
 /* @rating and review star widget :: with hover back afetr selecting
 ------------------------------------------------------------------------ */
-.smart-forms .rating { position:relative; }
-.smart-forms .rating.block { display:block; margin:10px 0; }
-.smart-forms .rating label{color: @secondary;}
-.smart-forms .rating label i{ font-size:17px; text-align:center; color:inherit;  }
-.smart-forms .rating label span{ font:22px/22px Times, Serif; }
-.smart-forms .rating-star{ margin-left:4px; }
-.smart-forms .rating-input { position: absolute; left:-9999px; top: auto; }
-.smart-forms .rating:hover .rating-star:hover,
-.smart-forms .rating:hover .rating-star:hover ~ .rating-star,
-.smart-forms .rating-input:checked ~ .rating-star { color: @primary;	}
-.smart-forms .rating-star,
-.smart-forms .rating:hover .rating-star {
+.form .rating { position:relative; }
+.form .rating.block { display:block; margin:10px 0; }
+.form .rating label{color: @secondary;}
+.form .rating label i{ font-size:17px; text-align:center; color:inherit;  }
+.form .rating label span{ font:22px/22px Times, Serif; }
+.form .rating-star{ margin-left:4px; }
+.form .rating-input { position: absolute; left:-9999px; top: auto; }
+.form .rating:hover .rating-star:hover,
+.form .rating:hover .rating-star:hover ~ .rating-star,
+.form .rating-input:checked ~ .rating-star { color: @primary;	}
+.form .rating-star,
+.form .rating:hover .rating-star {
 	width: 18px;
 	float: right;
 	display: block;
@@ -614,18 +614,18 @@ fieldset{
 	color: @secondary;
 }
 
-.smart-forms .rating:before,
-.smart-forms .rating:after{ display: table; content: ""; line-height: 0; }
-.smart-forms .rating:after{ clear: both; }
-.smart-forms .rating .lbl-text{ font-size:14px; display: inline-block; float:left; }
-.smart-forms .rating-wrapper {
+.form .rating:before,
+.form .rating:after{ display: table; content: ""; line-height: 0; }
+.form .rating:after{ clear: both; }
+.form .rating .lbl-text{ font-size:14px; display: inline-block; float:left; }
+.form .rating-wrapper {
 	position:relative;
 	display:inline-block;
 	margin-top:0;
 	float: right;
 }
 
-.smart-forms .rating label span{
+.form .rating label span{
 	font-family:Arial, Helvetica, sans-serif;
 	text-shadow: 0 1px rgba(255, 255, 255, 0);
 	.transition(margin 0.6s);
@@ -645,8 +645,8 @@ fieldset{
 	z-index:10;
 }
 
-.smart-forms .rating label:hover span{ bottom:100%; opacity:1; left: auto; margin-bottom:5px;  }
-.smart-forms .rating label span:before{
+.form .rating label:hover span{ bottom:100%; opacity:1; left: auto; margin-bottom:5px;  }
+.form .rating label span:before{
 	content: '';
 	position: absolute;
 	border-top: 4px solid #666666;
@@ -662,25 +662,25 @@ fieldset{
    @the positions can either be left or right while the input stays 100%
    @you ca use this to rapidly create search widgets, newsletter subscribe etc
 ---------------------------------------------------------------------------------*/
-.smart-forms .smart-widget,
-.smart-forms .append-picker-icon,
-.smart-forms .prepend-picker-icon { position: relative; display:block; }
-.smart-forms .smart-widget .field input,
-.smart-forms .append-picker-icon input,
-.smart-forms .prepend-picker-icon input { width: 100%; }
+.form .smart-widget,
+.form .append-picker-icon,
+.form .prepend-picker-icon { position: relative; display:block; }
+.form .smart-widget .field input,
+.form .append-picker-icon input,
+.form .prepend-picker-icon input { width: 100%; }
 
-.smart-forms .append-picker-icon button,
-.smart-forms .prepend-picker-icon button,
-.smart-forms .smart-widget .button {
+.form .append-picker-icon button,
+.form .prepend-picker-icon button,
+.form .smart-widget .button {
 	position: absolute;
 	height: 42px;
 	top: 0;
 }
 
-.smart-forms .append-picker-icon button,
-.smart-forms .prepend-picker-icon .gui-input,
-.smart-forms .sm-left .field input,
-.smart-forms .sm-right .button{
+.form .append-picker-icon button,
+.form .prepend-picker-icon .gui-input,
+.form .sm-left .field input,
+.form .sm-right .button{
 	-webkit-border-top-left-radius: 0;
 	-webkit-border-bottom-left-radius: 0;
 	-moz-border-top-left-radius: 0;
@@ -691,10 +691,10 @@ fieldset{
 	border-bottom-left-radius: 0;
 }
 
-.smart-forms .prepend-picker-icon button,
-.smart-forms .append-picker-icon .gui-input,
-.smart-forms .sm-right .field input,
-.smart-forms .sm-left .button{
+.form .prepend-picker-icon button,
+.form .append-picker-icon .gui-input,
+.form .sm-right .field input,
+.form .sm-left .button{
 	-webkit-border-top-right-radius: 0;
 	-webkit-border-bottom-right-radius: 0;
 	-moz-border-top-right-radius: 0;
@@ -705,37 +705,37 @@ fieldset{
 	border-bottom-right-radius: 0;
 }
 
-.smart-forms .prepend-picker-icon button,
-.smart-forms .sm-left .button { left:0; }
-.smart-forms .append-picker-icon button,
-.smart-forms .sm-right .button {  right:0; }
+.form .prepend-picker-icon button,
+.form .sm-left .button { left:0; }
+.form .append-picker-icon button,
+.form .sm-right .button {  right:0; }
 
 /* @smart widget buttons - to left
 ------------------------------------------------- */
-.smart-forms .sml-50,
-.smart-forms .prepend-picker-icon{ padding-left: 50px; }
-.smart-forms .sml-50 .button,
-.smart-forms .prepend-picker-icon button{ width: 50px; }
-.smart-forms .sml-80{ padding-left: 80px; }
-.smart-forms .sml-80 .button { width: 80px; }
-.smart-forms .sml-120{ padding-left: 120px; }
-.smart-forms .sml-120 .button { width: 120px; }
+.form .sml-50,
+.form .prepend-picker-icon{ padding-left: 50px; }
+.form .sml-50 .button,
+.form .prepend-picker-icon button{ width: 50px; }
+.form .sml-80{ padding-left: 80px; }
+.form .sml-80 .button { width: 80px; }
+.form .sml-120{ padding-left: 120px; }
+.form .sml-120 .button { width: 120px; }
 
 /* @smart widget buttons - to right
 ------------------------------------------------- */
-.smart-forms .smr-50,
-.smart-forms .append-picker-icon{ padding-right: 50px; }
-.smart-forms .smr-50 .button,
-.smart-forms .append-picker-icon button{ width: 50px; }
-.smart-forms .smr-80{ padding-right: 80px; }
-.smart-forms .smr-80 .button { width: 80px; }
-.smart-forms .smr-120{ padding-right: 120px; }
-.smart-forms .smr-120 .button { width: 120px; }
+.form .smr-50,
+.form .append-picker-icon{ padding-right: 50px; }
+.form .smr-50 .button,
+.form .append-picker-icon button{ width: 50px; }
+.form .smr-80{ padding-right: 80px; }
+.form .smr-80 .button { width: 80px; }
+.form .smr-120{ padding-right: 120px; }
+.form .smr-120 .button { width: 120px; }
 
 /* @picker buttons
 ------------------------------------------------- */
-.smart-forms .append-picker-icon button,
-.smart-forms .prepend-picker-icon button{
+.form .append-picker-icon button,
+.form .prepend-picker-icon button{
 	background: #bdc3c7;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.2);
 	text-align: center;
@@ -746,25 +746,25 @@ fieldset{
 
 /* @ picker buttons :hover :active states
 ---------------------------------------------------------------- */
-.smart-forms .append-picker-icon button:hover,
-.smart-forms .prepend-picker-icon button:hover { color: #243140; background: #cacfd2; }
-.smart-forms .append-picker-icon button:active,
-.smart-forms .prepend-picker-icon button:active{ color: #1d2938; background: #a1a6a9; }
+.form .append-picker-icon button:hover,
+.form .prepend-picker-icon button:hover { color: #243140; background: #cacfd2; }
+.form .append-picker-icon button:active,
+.form .prepend-picker-icon button:active{ color: #1d2938; background: #a1a6a9; }
 
 
 
 /* @icon append (right) :: prepend (left)
 ------------------------------------------------- */
-.smart-forms .append-icon,
-.smart-forms .prepend-icon{
+.form .append-icon,
+.form .prepend-icon{
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
 	width:100%;
 }
 
-.smart-forms .append-icon .field-icon,
-.smart-forms .prepend-icon .field-icon{
+.form .append-icon .field-icon,
+.form .prepend-icon .field-icon{
 	top:0;
 	width:42px;
 	height:42px;
@@ -781,23 +781,23 @@ fieldset{
 	z-index:99;
 }
 
-.smart-forms .append-icon .field-icon i,
-.smart-forms .prepend-icon .field-icon i{
+.form .append-icon .field-icon i,
+.form .prepend-icon .field-icon i{
 	position:relative;
 	font-size:14px;
 }
 
-.smart-forms .prepend-icon .field-icon{ left:0;  }
-.smart-forms .append-icon .field-icon{ right:0; }
-.smart-forms .prepend-icon > input,
-.smart-forms .prepend-icon > textarea{ padding-left:36px; }
-.smart-forms .append-icon > input,
-.smart-forms .append-icon > textarea{ padding-right:36px; padding-left:10px;  }
-.smart-forms .append-icon > textarea{ padding-right:36px; }
+.form .prepend-icon .field-icon{ left:0;  }
+.form .append-icon .field-icon{ right:0; }
+.form .prepend-icon > input,
+.form .prepend-icon > textarea{ padding-left:36px; }
+.form .append-icon > input,
+.form .append-icon > textarea{ padding-right:36px; padding-left:10px;  }
+.form .append-icon > textarea{ padding-right:36px; }
 
 /* @tooltips on inputs + textareas
 ------------------------------------------------- */
-.smart-forms .tooltip {
+.form .tooltip {
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
@@ -815,17 +815,17 @@ fieldset{
 	transition: margin 0.6s, opacity 0.6s;
 }
 
-.smart-forms .tooltip > em{ padding:12px; font-style:normal; display:block; position:static; }
-.smart-forms .tooltip:after { content: ''; position: absolute; }
-.smart-forms .option:hover .tooltip,
-.smart-forms .gui-input:focus + .tooltip,
-.smart-forms .gui-textarea:focus + .tooltip,
-.smart-forms .select > select:focus ~ .tooltip { opacity: 1; z-index: 999; }
+.form .tooltip > em{ padding:12px; font-style:normal; display:block; position:static; }
+.form .tooltip:after { content: ''; position: absolute; }
+.form .option:hover .tooltip,
+.form .gui-input:focus + .tooltip,
+.form .gui-textarea:focus + .tooltip,
+.form .select > select:focus ~ .tooltip { opacity: 1; z-index: 999; }
 
 /* @tooltip left
 ------------------------------------------------- */
-.smart-forms .tip-left { top:1px; margin-right:-20px; }
-.smart-forms .tip-left:after {
+.form .tip-left { top:1px; margin-right:-20px; }
+.form .tip-left:after {
 	top:12px;
 	left: 100%;
 	border-left: 8px solid #666666;
@@ -833,17 +833,17 @@ fieldset{
 	border-bottom: 8px solid transparent;
 }
 
-.smart-forms .gui-input:focus + .tip-left,
-.smart-forms .gui-textarea:focus + .tip-left,
-.smart-forms .select > select:focus ~ .tip-left {
+.form .gui-input:focus + .tip-left,
+.form .gui-textarea:focus + .tip-left,
+.form .select > select:focus ~ .tip-left {
 	margin-right:5px;
 	right: 100%;
 	left: auto;
 }
 /* @tooltip right
 ------------------------------------------------- */
-.smart-forms .tip-right { top:1px; margin-left:-20px; }
-.smart-forms .tip-right:after {
+.form .tip-right { top:1px; margin-left:-20px; }
+.form .tip-right:after {
 	top:12px;
 	right: 100%;
 	border-right: 8px solid #666666;
@@ -851,14 +851,14 @@ fieldset{
 	border-bottom: 8px solid transparent;
 }
 
-.smart-forms .gui-input:focus + .tip-right,
-.smart-forms .gui-textarea:focus + .tip-right,
-.smart-forms .select > select:focus ~ .tip-right { left: 100%; margin-left:5px; }
+.form .gui-input:focus + .tip-right,
+.form .gui-textarea:focus + .tip-right,
+.form .select > select:focus ~ .tip-right { left: 100%; margin-left:5px; }
 
 /* @tooltip right-top
 ------------------------------------------------- */
-.smart-forms .tip-right-top { bottom: 100%; margin-bottom: -20px; }
-.smart-forms .tip-right-top:after {
+.form .tip-right-top { bottom: 100%; margin-bottom: -20px; }
+.form .tip-right-top:after {
 	top: 100%;
 	right: 12px;
 	border-top: 8px solid #666666;
@@ -866,9 +866,9 @@ fieldset{
 	border-left: 8px solid transparent;
 }
 
-.smart-forms .gui-input:focus + .tip-right-top,
-.smart-forms .gui-textarea:focus + .tip-right-top,
-.smart-forms .select > select:focus ~ .tip-right-top {
+.form .gui-input:focus + .tip-right-top,
+.form .gui-textarea:focus + .tip-right-top,
+.form .select > select:focus ~ .tip-right-top {
 	right: 0;
 	left: auto;
 	margin-bottom: 10px;
@@ -876,33 +876,33 @@ fieldset{
 
 /* @tooltip left-top
 ------------------------------------------------- */
-.smart-forms .option .tooltip,
-.smart-forms .tip-left-top { bottom: 100%; margin-bottom: -20px; }
-.smart-forms .option .tooltip:after,
-.smart-forms .tip-left-top:after {
+.form .option .tooltip,
+.form .tip-left-top { bottom: 100%; margin-bottom: -20px; }
+.form .option .tooltip:after,
+.form .tip-left-top:after {
 	top: 100%;
 	left: 12px;
 	border-top: 8px solid #666666;
 	border-right: 8px solid transparent;
 	border-left: 8px solid transparent;
 }
-.smart-forms .option:hover .tooltip,
-.smart-forms .gui-input:focus + .tip-left-top,
-.smart-forms .gui-textarea:focus + .tip-left-top,
-.smart-forms .select > select:focus ~ .tip-left-top {
+.form .option:hover .tooltip,
+.form .gui-input:focus + .tip-left-top,
+.form .gui-textarea:focus + .tip-left-top,
+.form .select > select:focus ~ .tip-left-top {
 	left: 0;
 	right: auto;
 	margin-bottom: 10px;
 }
 
-.smart-forms .option:hover .tooltip{
+.form .option:hover .tooltip{
 	left:-10px;
 }
 
 /* @tooltip right-bottom
 ------------------------------------------------- */
-.smart-forms .tip-right-bottom { top: 100%; margin-top: -20px; }
-.smart-forms .tip-right-bottom:after {
+.form .tip-right-bottom { top: 100%; margin-top: -20px; }
+.form .tip-right-bottom:after {
 	right: 12px;
 	bottom: 100%;
 	border-bottom: 8px solid #666666;
@@ -910,8 +910,8 @@ fieldset{
 	border-left: 8px solid transparent;
 }
 
-.smart-forms .gui-input:focus + .tip-right-bottom,
-.smart-forms .gui-textarea:focus + .tip-right-bottom {
+.form .gui-input:focus + .tip-right-bottom,
+.form .gui-textarea:focus + .tip-right-bottom {
 	margin-top: 10px;
 	left: auto;
 	right: 0;
@@ -919,8 +919,8 @@ fieldset{
 
 /* @tooltip left-bottom
 ------------------------------------------------- */
-.smart-forms .tip-left-bottom { top: 100%; margin-top: -20px; }
-.smart-forms .tip-left-bottom:after {
+.form .tip-left-bottom { top: 100%; margin-top: -20px; }
+.form .tip-left-bottom:after {
 	left: 12px;
 	bottom: 100%;
 	border-bottom: 8px solid #666666;
@@ -928,8 +928,8 @@ fieldset{
 	border-left: 8px solid transparent;
 }
 
-.smart-forms .gui-input:focus + .tip-left-bottom,
-.smart-forms .gui-textarea:focus + .tip-left-bottom {
+.form .gui-input:focus + .tip-left-bottom,
+.form .gui-textarea:focus + .tip-left-bottom {
 	margin-top:10px;
 	right: auto;
 	left: 0;
@@ -937,15 +937,15 @@ fieldset{
 
 /* @lists
 -------------------------------------------------------------- */
-.smart-forms .smart-list{ list-style:none; margin:0; padding:0; }
-.smart-forms .smart-list li{ margin-bottom:20px; }
+.form .smart-list{ list-style:none; margin:0; padding:0; }
+.form .smart-list li{ margin-bottom:20px; }
 
 /* @notification messages | info | error | warning | success
 -------------------------------------------------------------- */
-.smart-forms .form-msg{ display:none; }
-.smart-forms .notification { color: #444; padding:15px; position:relative; }
-.smart-forms .notification p{ margin:0; padding:0 15px; padding-left:5px; line-height:normal;  }
-.smart-forms .notification .close-btn{
+.form .form-msg{ display:none; }
+.form .notification { color: #444; padding:15px; position:relative; }
+.form .notification p{ margin:0; padding:0 15px; padding-left:5px; line-height:normal;  }
+.form .notification .close-btn{
 	margin-top: -7px;
 	padding: inherit;
 	position: absolute;
@@ -958,12 +958,12 @@ fieldset{
 	top:14%;
 }
 
-.smart-forms .notification .close-btn:hover{ opacity: 1; }
-.smart-forms .alert-info { color:#163161; background-color: #cfe6fc; }
-.smart-forms .alert-success { color:#336633; background-color: #d2f7ad; }
-.smart-forms .alert-warning { color: #CC6600; background-color: #fae7a2; }
-.smart-forms .alert-error { color:#990000; background-color: #FBDBCF; }
-.smart-forms .notification ul{
+.form .notification .close-btn:hover{ opacity: 1; }
+.form .alert-info { color:#163161; background-color: #cfe6fc; }
+.form .alert-success { color:#336633; background-color: #d2f7ad; }
+.form .alert-warning { color: #CC6600; background-color: #fae7a2; }
+.form .alert-error { color:#990000; background-color: #FBDBCF; }
+.form .notification ul{
 	margin-left:1.3em;
 	list-style-position: inside;
 	margin-top:10px;
@@ -971,26 +971,26 @@ fieldset{
 
 /* @validaion - error state
 ------------------------------------- */
-.smart-forms .state-error .gui-input,
-.smart-forms .state-error .gui-textarea,
-.smart-forms .state-error.select > select,
-.smart-forms .state-error.select-multiple > select,
-.smart-forms .state-error input:hover + .checkbox,
-.smart-forms .state-error input:hover + .radio,
-.smart-forms .state-error input:focus + .checkbox,
-.smart-forms .state-error input:focus + .radio,
-.smart-forms .state-error .checkbox,
-.smart-forms .state-error .radio{
+.form .state-error .gui-input,
+.form .state-error .gui-textarea,
+.form .state-error.select > select,
+.form .state-error.select-multiple > select,
+.form .state-error input:hover + .checkbox,
+.form .state-error input:hover + .radio,
+.form .state-error input:focus + .checkbox,
+.form .state-error input:focus + .radio,
+.form .state-error .checkbox,
+.form .state-error .radio{
 	border-color:#E46B66;
 }
 
-.smart-forms .state-error .gui-input ~ .field-icon i,
-.smart-forms .state-error .gui-textarea ~ .field-icon i{  color: #E46B66; }
-.smart-forms .state-error.select .arrow { color: #E46B66; }
-.smart-forms .state-error .gui-input ~ .input-hint,
-.smart-forms .state-error.file .gui-file:hover + .gui-input,
-.smart-forms .state-error .gui-textarea ~ .input-hint { border-color:#E46B66; }
-.smart-forms .state-error + em{
+.form .state-error .gui-input ~ .field-icon i,
+.form .state-error .gui-textarea ~ .field-icon i{  color: #E46B66; }
+.form .state-error.select .arrow { color: #E46B66; }
+.form .state-error .gui-input ~ .input-hint,
+.form .state-error.file .gui-file:hover + .gui-input,
+.form .state-error .gui-textarea ~ .input-hint { border-color:#E46B66; }
+.form .state-error + em{
 	display: block!important;
 	margin-top: 6px;
 	padding: 0 3px;
@@ -1004,46 +1004,46 @@ fieldset{
 
 /* @validaion - success state
 -------------------------------------------------- */
-.smart-forms .state-success .gui-input,
-.smart-forms .state-success .gui-textarea,
-.smart-forms .state-success.select > select,
-.smart-forms .state-success.select-multiple > select,
-.smart-forms .state-success input:hover + .checkbox,
-.smart-forms .state-success input:hover + .radio,
-.smart-forms .state-success input:focus + .checkbox,
-.smart-forms .state-success input:focus + .radio,
-.smart-forms .state-success .checkbox,
-.smart-forms .state-success .radio{
+.form .state-success .gui-input,
+.form .state-success .gui-textarea,
+.form .state-success.select > select,
+.form .state-success.select-multiple > select,
+.form .state-success input:hover + .checkbox,
+.form .state-success input:hover + .radio,
+.form .state-success input:focus + .checkbox,
+.form .state-success input:focus + .radio,
+.form .state-success .checkbox,
+.form .state-success .radio{
 	border-color:#2ecc71;
 }
 
-.smart-forms .state-success .gui-input ~ .field-icon i,
-.smart-forms .state-success .gui-textarea ~ .field-icon i{  color: #2ecc71; }
-.smart-forms .state-success.select .arrow { color: #2ecc71; }
-.smart-forms .state-success .gui-input ~ .input-hint,
-.smart-forms .state-success.file .gui-file:hover + .gui-input,
-.smart-forms .state-success .gui-textarea ~ .input-hint { border-color:#2ecc71; }
+.form .state-success .gui-input ~ .field-icon i,
+.form .state-success .gui-textarea ~ .field-icon i{  color: #2ecc71; }
+.form .state-success.select .arrow { color: #2ecc71; }
+.form .state-success .gui-input ~ .input-hint,
+.form .state-success.file .gui-file:hover + .gui-input,
+.form .state-success .gui-textarea ~ .input-hint { border-color:#2ecc71; }
 
 
 /* @disabled state
 ----------------------------------------------- */
-.smart-forms .button[disabled],
-.smart-forms .state-disabled .button,
-.smart-forms input[disabled] + .radio,
-.smart-forms input[disabled] + .checkbox,
-.smart-forms .switch > input[disabled] + label{
+.form .button[disabled],
+.form .state-disabled .button,
+.form input[disabled] + .radio,
+.form input[disabled] + .checkbox,
+.form .switch > input[disabled] + label{
 	cursor: default;
 	opacity:0.5;
 }
 
-.smart-forms .gui-input[disabled],
-.smart-forms .gui-textarea[disabled],
-.smart-forms .select > select[disabled],
-.smart-forms .select-multiple select[disabled],
-.smart-forms .gui-input[disabled] ~ .input-hint,
-.smart-forms .file .gui-file[disabled] + .gui-input,
-.smart-forms .file .gui-file[disabled]:hover + .gui-input,
-.smart-forms .gui-textarea[disabled] ~ .input-hint {
+.form .gui-input[disabled],
+.form .gui-textarea[disabled],
+.form .select > select[disabled],
+.form .select-multiple select[disabled],
+.form .gui-input[disabled] ~ .input-hint,
+.form .file .gui-file[disabled] + .gui-input,
+.form .file .gui-file[disabled]:hover + .gui-input,
+.form .gui-textarea[disabled] ~ .input-hint {
   background-color: #f4f6f6;
   border-color: #d5dbdb!important;
   cursor: default;
@@ -1051,9 +1051,9 @@ fieldset{
   opacity:0.7;
 }
 
-.smart-forms input[disabled] ~ .field-icon i,
-.smart-forms textarea[disabled] ~ .field-icon i,
-.smart-forms .select > select[disabled] + .arrow{
+.form input[disabled] ~ .field-icon i,
+.form textarea[disabled] ~ .field-icon i,
+.form .select > select[disabled] + .arrow{
 	opacity:0.4;
 }
 
@@ -1202,18 +1202,18 @@ fieldset{
 
 /* @ui slider - requires jquery ui
 ------------------------------------------------------*/
-.smart-forms .slider-wrapper,
-.smart-forms .sliderv-wrapper{
+.form .slider-wrapper,
+.form .sliderv-wrapper{
 	background: @intermediate;
 	position:relative;
 }
 
-.smart-forms .ui-slider {
+.form .ui-slider {
 	position: relative;
 	text-align: left;
 }
 
-.smart-forms .ui-slider .ui-slider-handle {
+.form .ui-slider .ui-slider-handle {
 	position: absolute;
 	z-index: 2;
 	width: 1.5em;
@@ -1231,7 +1231,7 @@ fieldset{
 	outline:none;
 }
 
-.smart-forms .ui-slider .ui-slider-handle:before{
+.form .ui-slider .ui-slider-handle:before{
 	content: '';
 	width: 7px;
 	height: 7px;
@@ -1246,7 +1246,7 @@ fieldset{
 	top:4px;
 }
 
-.smart-forms .ui-slider .ui-slider-range {
+.form .ui-slider .ui-slider-range {
 	position: absolute;
 	z-index: 1;
 	font-size: .7em;
@@ -1256,26 +1256,26 @@ fieldset{
 	background-color: @primary;
 }
 
-.smart-forms .ui-slider .ui-slider-handle{ border-color: @light; }
-.smart-forms .ui-slider .ui-slider-handle:before,
-.smart-forms .ui-slider .ui-slider-range { background-color: @primary;  }
+.form .ui-slider .ui-slider-handle{ border-color: @light; }
+.form .ui-slider .ui-slider-handle:before,
+.form .ui-slider .ui-slider-range { background-color: @primary;  }
 
-.smart-forms .ui-slider.ui-state-disabled .ui-slider-handle,
-.smart-forms .ui-slider.ui-state-disabled .ui-slider-range { filter: inherit; }
-.smart-forms .ui-slider-horizontal { height: .5em; }
-.smart-forms .ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; }
-.smart-forms .ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
-.smart-forms .ui-slider-horizontal .ui-slider-range-min { left: 0; }
-.smart-forms .ui-slider-horizontal .ui-slider-range-max { right: 0; }
-.smart-forms .ui-slider-vertical,
-.smart-forms .sliderv-wrapper { width: .5em; height: 100px; }
-.smart-forms .ui-slider-vertical .ui-slider-handle { left: -.45em; margin-left: 0; margin-bottom: -.6em; }
-.smart-forms .ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
-.smart-forms .ui-slider-vertical .ui-slider-range-min { bottom: 0; }
-.smart-forms .ui-slider-vertical .ui-slider-range-max { top: 0; }
-.smart-forms .slider-input{  color:#f6931f!important; border:0; background:none; }
-.smart-forms .slider-group .sliderv-wrapper{ height:150px; float:left; margin:15px 15px;   }
-.smart-forms .ui-slider .ui-state-active {
+.form .ui-slider.ui-state-disabled .ui-slider-handle,
+.form .ui-slider.ui-state-disabled .ui-slider-range { filter: inherit; }
+.form .ui-slider-horizontal { height: .5em; }
+.form .ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; }
+.form .ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.form .ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.form .ui-slider-horizontal .ui-slider-range-max { right: 0; }
+.form .ui-slider-vertical,
+.form .sliderv-wrapper { width: .5em; height: 100px; }
+.form .ui-slider-vertical .ui-slider-handle { left: -.45em; margin-left: 0; margin-bottom: -.6em; }
+.form .ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.form .ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.form .ui-slider-vertical .ui-slider-range-max { top: 0; }
+.form .slider-input{  color:#f6931f!important; border:0; background:none; }
+.form .slider-group .sliderv-wrapper{ height:150px; float:left; margin:15px 15px;   }
+.form .ui-slider .ui-state-active {
 	cursor: -webkit-grabbing;
 	cursor: -moz-grabbing;
 	cursor: grabbing;
@@ -1283,7 +1283,7 @@ fieldset{
 
 /* @ui slider tooltip
 ------------------------------------------------------*/
-.smart-forms .slider-tip {
+.form .slider-tip {
 	display: block;
 	position: absolute;
 	text-align: center;
@@ -1297,8 +1297,8 @@ fieldset{
 	color: #fff;
 }
 
-.smart-forms .slider-wrapper .slider-tip{ top: -50px; left:-15px; }
-.smart-forms .slider-wrapper .slider-tip:after {
+.form .slider-wrapper .slider-tip{ top: -50px; left:-15px; }
+.form .slider-wrapper .slider-tip:after {
 	content: '';
 	position: absolute;
 	top: 98%;
@@ -1308,8 +1308,8 @@ fieldset{
 	border-left: 8px solid transparent;
 }
 
-.smart-forms .sliderv-wrapper .slider-tip{ left: 30px; top:-12px; }
-.smart-forms .sliderv-wrapper .slider-tip:after{
+.form .sliderv-wrapper .slider-tip{ left: 30px; top:-12px; }
+.form .sliderv-wrapper .slider-tip:after{
 	content: '';
 	position: absolute;
 	top:30%;
@@ -1421,14 +1421,14 @@ fieldset{
 
 /* @progress bars
 ------------------------------------------------------*/
-.smart-forms .progress-section{ display:none; }
-.smart-forms .progress-bar {
+.form .progress-section{ display:none; }
+.form .progress-bar {
 	position: relative;
 	background: @intermediate;
 	border-radius: 1px;
 }
 
-.smart-forms .progress-bar .percent {
+.form .progress-bar .percent {
 	position:absolute;
 	display:inline-block;
 	top:-3px;
@@ -1436,7 +1436,7 @@ fieldset{
 	font-size:9px;
 	color:#93A2AA;
 }
-.smart-forms .progress-bar > .bar {
+.form .progress-bar > .bar {
 	width:60%;
 	height:7px;
 	display: block;
@@ -1447,24 +1447,24 @@ fieldset{
 
 /* @progress bar themes
 ----------------------------------------------------------- */
-.smart-forms .bar-primary > .bar { background-color: @primary; }
-.smart-forms .bar-blue > .bar     { background-color: #3498db; }
-.smart-forms .bar-black > .bar    { background-color: #34495e; }
-.smart-forms .bar-green > .bar    { background-color: #2ecc71; }
-.smart-forms .bar-purple > .bar   { background-color: #9B59B6; }
-.smart-forms .bar-red > .bar      { background-color: #e74c3c; }
-.smart-forms .bar-yellow > .bar   { background-color: #ed9c28; }
+.form .bar-primary > .bar { background-color: @primary; }
+.form .bar-blue > .bar     { background-color: #3498db; }
+.form .bar-black > .bar    { background-color: #34495e; }
+.form .bar-green > .bar    { background-color: #2ecc71; }
+.form .bar-purple > .bar   { background-color: #9B59B6; }
+.form .bar-red > .bar      { background-color: #e74c3c; }
+.form .bar-yellow > .bar   { background-color: #ed9c28; }
 
 /* @progress bar strips + animation IE10+
 ----------------------------------------------------------- */
 
-.smart-forms .ui-slider .ui-slider-range{
+.form .ui-slider .ui-slider-range{
 	background: @primary;
 }
 
-.smart-forms .progress > button[type="submit"]:hover,
-.smart-forms .progress > button[type="submit"],
-.smart-forms .progress-bar > .bar {
+.form .progress > button[type="submit"]:hover,
+.form .progress > button[type="submit"],
+.form .progress-bar > .bar {
 	background-size: 16px 16px;
 	background-image: -webkit-linear-gradient(top left,
 					  transparent, transparent 25%, rgba(255, 255, 255, 0.3) 25%, rgba(255, 255, 255, 0.3) 50%,
@@ -1483,16 +1483,16 @@ fieldset{
 					  transparent 50%, transparent 75%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0.3));
 }
 
-.smart-forms .progress > button[type="submit"],
-.smart-forms .progress > button[type="submit"]:hover,
-.smart-forms .progress-animated > .bar{
+.form .progress > button[type="submit"],
+.form .progress > button[type="submit"]:hover,
+.form .progress-animated > .bar{
 	-webkit-animation: sfprogress .6s linear infinite;
 	-moz-animation: sfprogress .6s linear infinite;
 	-o-animation: sfprogress .6s linear infinite;
 	animation: sfprogress .6s linear infinite;
 }
 
-.smart-forms .progress > button[type="submit"]:hover{ cursor:wait; }
+.form .progress > button[type="submit"]:hover{ cursor:wait; }
 
 @-webkit-keyframes sfprogress {
 	from { background-position: 0 0; }
@@ -1517,26 +1517,26 @@ fieldset{
 
 /* @google map :: block elements
 ----------------------------------------------------------------------- */
-.smart-forms .map-container{ padding:10px; border: 2px solid #5D5D5D; }
-.smart-forms #map_canvas{ width:100%; height:300px; overflow:hidden;  }
-.smart-forms .block{ display:block; }
+.form .map-container{ padding:10px; border: 2px solid #5D5D5D; }
+.form #map_canvas{ width:100%; height:300px; overflow:hidden;  }
+.form .block{ display:block; }
 
 /* @form grid
 ----------------------------------- */
 
 /* @form rows
 --------------------------------- */
-.smart-forms .frm-row{ margin:0 -10px;  }
-.smart-forms .slider-group:before,
-.smart-forms .slider-group:after,
-.smart-forms .frm-row:before,
-.smart-forms .frm-row:after { display: table; content: ""; line-height: 0; }
-.smart-forms .slider-group:after,
-.smart-forms .frm-row:after{ clear: both; }
+.form .frm-row{ margin:0 -10px;  }
+.form .slider-group:before,
+.form .slider-group:after,
+.form .frm-row:before,
+.form .frm-row:after { display: table; content: ""; line-height: 0; }
+.form .slider-group:after,
+.form .frm-row:after{ clear: both; }
 
 /* @spacers
 --------------------------------------- */
-.smart-forms .spacer{
+.form .spacer{
 	border-top:1px solid #484848;
 	display:block;
 	height:0;
@@ -1544,31 +1544,31 @@ fieldset{
 
 /* @padding spacers :: modify accordingly
 -------------------------------------------------- */
-.smart-forms .frm-row .pad-l10{ padding-left:10px; }
-.smart-forms .frm-row .pad-r10{ padding-right:10px; }
-.smart-forms .frm-row .pad-l20{ padding-left:20px; }
-.smart-forms .frm-row .pad-r20{ padding-right:20px; }
-.smart-forms .frm-row .pad-l30{ padding-left:30px; }
-.smart-forms .frm-row .pad-r30{ padding-right:30px; }
-.smart-forms .frm-row .pad-l40{ padding-left:40px; }
-.smart-forms .frm-row .pad-r40{ padding-right:40px; }
+.form .frm-row .pad-l10{ padding-left:10px; }
+.form .frm-row .pad-r10{ padding-right:10px; }
+.form .frm-row .pad-l20{ padding-left:20px; }
+.form .frm-row .pad-r20{ padding-right:20px; }
+.form .frm-row .pad-l30{ padding-left:30px; }
+.form .frm-row .pad-r30{ padding-right:30px; }
+.form .frm-row .pad-l40{ padding-left:40px; }
+.form .frm-row .pad-r40{ padding-right:40px; }
 
 /* @border spacers + text adjust
 -------------------------------------------------- */
-.smart-forms .bdl { border-left:1px solid #484848;  }
-.smart-forms .bdr { border-right:1px solid #484848; }
-.smart-forms .fine-grey{ color:#888888; }
-.smart-forms .small-text{ font-size:11px; font-style:normal;  }
-.smart-forms .text-align{ height:42px; line-height:42px; }
+.form .bdl { border-left:1px solid #484848;  }
+.form .bdr { border-right:1px solid #484848; }
+.form .fine-grey{ color:#888888; }
+.form .small-text{ font-size:11px; font-style:normal;  }
+.form .text-align{ height:42px; line-height:42px; }
 
 /* @element alignment
 -------------------------------------------------- */
-.smart-forms .align-right{ text-align:right; }
-.smart-forms .align-center{ text-align:center; }
+.form .align-right{ text-align:right; }
+.form .align-center{ text-align:center; }
 
 /* @simple price boxes :: depend on grid
 -------------------------------------------------- */
-.smart-forms .price-box{
+.form .price-box{
 	padding:30px;
 	text-align:center;
 	position:relative;
@@ -1580,19 +1580,19 @@ fieldset{
 	box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.05);
 }
 
-.smart-forms .price-box p{ line-height:1.5em; color:#888; margin-bottom:0; }
-.smart-forms .price-box h5{ text-transform:uppercase; font-weight:300; margin:0; font-size:15px; color:#888; letter-spacing:2px  }
-.smart-forms .price-box h4{ font-size:60px; font-weight:300; margin:0; color:#888; }
-.smart-forms .selected-box h4{ color:@primary; }
-.smart-forms .price-box h4 sup{ position:relative; font-size:30px; vertical-align:top; top:15px; }
-.smart-forms .price-box h4 .per-month{font-size:14px; }
-.smart-forms .expand{ height:50px; line-height:50px!important; }
+.form .price-box p{ line-height:1.5em; color:#888; margin-bottom:0; }
+.form .price-box h5{ text-transform:uppercase; font-weight:300; margin:0; font-size:15px; color:#888; letter-spacing:2px  }
+.form .price-box h4{ font-size:60px; font-weight:300; margin:0; color:#888; }
+.form .selected-box h4{ color:@primary; }
+.form .price-box h4 sup{ position:relative; font-size:30px; vertical-align:top; top:15px; }
+.form .price-box h4 .per-month{font-size:14px; }
+.form .expand{ height:50px; line-height:50px!important; }
 
 
 /* @simple price boxes ribbon IE8+
 ----------------------------------------- */
-.smart-forms .ribbon,
-.smart-forms .ribbon-large{
+.form .ribbon,
+.form .ribbon-large{
 	width:75px;
 	height:78px;
 	overflow:hidden;
@@ -1602,7 +1602,7 @@ fieldset{
 	z-index:1;
 }
 
-.smart-forms .ribbon-inner{
+.form .ribbon-inner{
 	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 	-webkit-box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.15);
@@ -1630,8 +1630,8 @@ fieldset{
 	top:6px;
 }
 
-.smart-forms .ribbon-inner:before,
-.smart-forms .ribbon-inner:after{
+.form .ribbon-inner:before,
+.form .ribbon-inner:after{
 	content:"";
 	border-top:3px solid #16a085;
 	border-left:3px solid transparent;
@@ -1640,10 +1640,10 @@ fieldset{
 	bottom:-3px;
 }
 
-.smart-forms .ribbon-inner:before{ left:0px; }
-.smart-forms .ribbon-inner:after{ right:0px; }
-.smart-forms .ribbon-large{ width:115px; height:118px; }
-.smart-forms .ribbon-large .ribbon-inner{
+.form .ribbon-inner:before{ left:0px; }
+.form .ribbon-inner:after{ right:0px; }
+.form .ribbon-large{ width:115px; height:118px; }
+.form .ribbon-large .ribbon-inner{
 	width:160px;
 	left:-8px;
 	top:28px;
@@ -1651,15 +1651,15 @@ fieldset{
 
 /* @captcha refresh button + icon
 -------------------------------------------------- */
-.smart-forms .sfcode{ padding-left:24px; }
-.smart-forms .captcode{ padding:0; position:relative; }
-.smart-forms .captcode:hover{ background:#BDC3C7!important;}
-.smart-forms .captcode img{
+.form .sfcode{ padding-left:24px; }
+.form .captcode{ padding:0; position:relative; }
+.form .captcode:hover{ background:#BDC3C7!important;}
+.form .captcode img{
 	position:relative;
 	top:2px;
 	left:2px;
 }
-.smart-forms .refresh-captcha{
+.form .refresh-captcha{
 	position:absolute;
 	background:@primary;
 	border:3px solid #16a085;
@@ -1673,7 +1673,7 @@ fieldset{
 	top:4px;
 }
 
-.smart-forms .refresh-captcha i{
+.form .refresh-captcha i{
 	position:absolute;
 	text-align:center;
 	line-height:26px;
@@ -1684,17 +1684,17 @@ fieldset{
 
 /* @captcha refresh button themes
 -------------------------------------------------- */
-.smart-forms .refresh-black    { background: #34495e; border-color: #2c3e50; }
-.smart-forms .refresh-blue     { background: #3498db; border-color: #2c81ba; }
-.smart-forms .refresh-green    { background: #2ecc71; border-color: #27ad60; }
-.smart-forms .refresh-purple   { background: #9B59B6; border-color: #8E44AD; }
-.smart-forms .refresh-red      { background: #e74c3c; border-color: #c44133; }
-.smart-forms .refresh-yellow   { background: #ed9c28; border-color: #d58512; }
+.form .refresh-black    { background: #34495e; border-color: #2c3e50; }
+.form .refresh-blue     { background: #3498db; border-color: #2c81ba; }
+.form .refresh-green    { background: #2ecc71; border-color: #27ad60; }
+.form .refresh-purple   { background: #9B59B6; border-color: #8E44AD; }
+.form .refresh-red      { background: #e74c3c; border-color: #c44133; }
+.form .refresh-yellow   { background: #ed9c28; border-color: #d58512; }
 
 /* Firefox select fix - select arrow hack  disabled on FF 30+
 -------------------------------------------------------------- */
 @-moz-document url-prefix() {
-	.smart-forms .select:before{
+	.form .select:before{
 		content: '';
 		pointer-events:none;
 		-moz-transition:none;
@@ -1708,10 +1708,10 @@ fieldset{
 		z-index:99;
 	}
 
-	.smart-forms .select > select:focus,
-	.smart-forms .select > select:hover,
-	.smart-forms .select:hover select,
-	.smart-forms .select:hover:before{
+	.form .select > select:focus,
+	.form .select > select:hover,
+	.form .select:hover select,
+	.form .select:hover:before{
 		background: #333333;
 		-moz-transition:none;
 		transition:none;
@@ -1719,48 +1719,48 @@ fieldset{
 		box-shadow:none;
 	}
 
-	.smart-forms .select .arrow {  z-index:100;  }
-	.smart-forms .state-error.select > select:focus,
-	.smart-forms .state-error.select > select:hover,
-	.smart-forms .state-error.select:hover select,
-	.smart-forms .state-error.select:hover:before,
-	.smart-forms .state-error.select:before { background:#484848;  }
-	.smart-forms .state-success.select > select:focus,
-	.smart-forms .state-success.select > select:hover,
-	.smart-forms .state-success.select:hover select,
-	.smart-forms .state-success.select:hover:before,
-	.smart-forms .state-success.select:before { background:#484848;  }
+	.form .select .arrow {  z-index:100;  }
+	.form .state-error.select > select:focus,
+	.form .state-error.select > select:hover,
+	.form .state-error.select:hover select,
+	.form .state-error.select:hover:before,
+	.form .state-error.select:before { background:#484848;  }
+	.form .state-success.select > select:focus,
+	.form .state-success.select > select:hover,
+	.form .state-success.select:hover select,
+	.form .state-success.select:hover:before,
+	.form .state-success.select:before { background:#484848;  }
 }
 
 /* IE10+
 -------------------------------------------------------------------------- */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	.smart-forms .select .arrow:after,
-	.smart-forms .select .arrow:before { display:block; }
+	.form .select .arrow:after,
+	.form .select .arrow:before { display:block; }
 }
 
 /* @Fix old of versions android + ios
 ------------------------------------------------------------- */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-		.smart-forms .option,
-		.smart-forms .rating,
-		.smart-forms .switch,
-		.smart-forms .captcode { -webkit-animation: bugfix infinite 1s; }
+		.form .option,
+		.form .rating,
+		.form .switch,
+		.form .captcode { -webkit-animation: bugfix infinite 1s; }
 		@-webkit-keyframes bugfix {
 			from { padding: 0;  }
 			to { padding: 0; }
 		}
-		.smart-forms .switch { margin-right:10px;  margin-bottom:5px; }
-		.smart-forms .option { margin-right:15px; }
-		.smart-forms .switch-round > .switch-label:after{ font:20px/18px Times, Serif; }
+		.form .switch { margin-right:10px;  margin-bottom:5px; }
+		.form .option { margin-right:15px; }
+		.form .switch-round > .switch-label:after{ font:20px/18px Times, Serif; }
 }
 
 /* @responsiveness for tablets + smart mobile
 -------------------------------------------------- */
 @media (max-width: 800px) {
-	.smart-forms .frm-row{ margin:0;  }
-	.smart-forms .frm-row .colm{  width: 100%; float:none; padding:0; }
-	.smart-forms .bdl { border-left:0;  }
-	.smart-forms .bdr { border-right:0; }
-	.smart-forms .align-right{ text-align: left; }
+	.form .frm-row{ margin:0;  }
+	.form .frm-row .colm{  width: 100%; float:none; padding:0; }
+	.form .bdl { border-left:0;  }
+	.form .bdr { border-right:0; }
+	.form .align-right{ text-align: left; }
 }
